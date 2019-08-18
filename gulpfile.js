@@ -11,7 +11,7 @@ const gulp         = require('gulp'),
 			uglify       = require('gulp-uglify'),
 			imagemin     = require('gulp-imagemin'),
 			imgCompress  = require('imagemin-jpeg-recompress'),
-			responsive   = require('gulp-responsive'),
+			// responsive   = require('gulp-responsive'),
 			webp         = require('gulp-webp'),
 			newer        = require('gulp-newer'),
 			bwsync       = require('browser-sync').create();
@@ -36,25 +36,25 @@ const path = {
 							font: 'src/fonts/**/*.*'
 						},
 						watch: {
-							dev: 'src',
+							dev:  'src',
 							html: 'src/**/*.html',
-							css:  'src/scss/*.scss',
+							css:  'src/scss/**/*.scss',
 							js:   'src/js/*.js',
 							img: ['src/img/**/*.jpg',
 										'src/img/**/*.svg',
 										'src/img/**/*.png'],
-							font: 'src/fonts/**/*.*'
+							font: 'src/fonts/*.*'
 						},
 					};
 
 gulp.task('serv', function() {
 	bwsync.init({
 		server: {
-			baseDir: './src',
+			baseDir: './dev',
 			notify: false,
 		}
 	});
-	bwsync.watch(path.watch.dest, bwsync.reload);
+	bwsync.watch(path.watch.dev, bwsync.reload);
 });
 
 gulp.task('html', function() {
@@ -109,8 +109,8 @@ gulp.task('img', function() {
 			}),
 			imagemin.svgo({
 				plugins: [
-				{removeViewBox: true},
-				{cleanupIDs: false}
+					{removeViewBox: true},
+					{cleanupIDs: false}
 				]
 			})
 		]))
@@ -123,17 +123,17 @@ gulp.task('imgx', function() {
 	return gulp.src(path.src.img)
 		.pipe(plumber())
 		.pipe(newer(path.build.img))
-		.pipe(responsive({
-			'*': [{
-				width: '50%',
-				quality: 90,
-				rename: { prefix: 'x2/', },
-				}, {
-				width: '33%',
-				quality: 90,
-				rename: { prefix: 'x1/', },
-			}]
-		}))
+		// .pipe(responsive({
+		// 	'*': [{
+		// 		width: '50%',
+		// 		quality: 90,
+		// 		rename: { prefix: 'x2/', },
+		// 		}, {
+		// 		width: '33%',
+		// 		quality: 90,
+		// 		rename: { prefix: 'x1/', },
+		// 	}]
+		// }))
 		.pipe(gulp.dest(path.build.img));
 });
 

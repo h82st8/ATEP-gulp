@@ -24,6 +24,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "gulp-webp": "^4.0.1",
-    "imagemin-jpeg-recompress": "^6.0.0"
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "node-sass": "^4.12.0"
   }
 }

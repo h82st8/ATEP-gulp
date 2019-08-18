@@ -13,6 +13,16 @@
 	&:last-child {
 		margin-right: 0;
 	}
+
+	a .user-menu__icon {
+		transition: all 0.3s ease;
+	}
+
+	a:hover .user-menu__icon,
+	a:focus .user-menu__icon {
+		transform: scale(1.15);
+		transition-delay: .3s;
+	}
 }
 
 .user-menu__item--like {

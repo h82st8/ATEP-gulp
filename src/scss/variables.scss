@@ -11,10 +11,11 @@ $logo-font-family                    : "Baskerville Old Face", serif;
 
 
 // color
-$main-text-color       : #000000;
-$main-color-background : #ffffff;
-$main-slider-background: #000000;
-$active-text-color     : #ff0000;
+$main-text-color        : #000000;
+$main-color-background  : #ffffff;
+$second-color-background: #ffe9e2;
+$main-slider-background : #000000;
+$active-text-color      : #ff0000;
 
 //mixin
 @mixin flex($fx-direction, $fx-justify) {

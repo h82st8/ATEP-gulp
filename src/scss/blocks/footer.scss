@@ -1,0 +1,26 @@
+.footer {
+	background: $second-color-background;
+}
+
+.footer__wrapper {
+	@include flex(column, flex-start);
+
+	margin: 0 auto;
+	width : 690px;
+
+	align-items: center;
+}
+
+.footer__item--menu {
+	width: 100%;
+}
+
+.footer__nav-menu {
+	@include flex(row, space-between);
+
+	margin    : 0;
+	padding   : 0;
+
+	list-style: none;
+}
+
