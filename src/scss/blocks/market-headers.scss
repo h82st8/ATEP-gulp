@@ -1,0 +1,10 @@
+.market-headers {
+    @include flex(row, center);
+    align-items: center;
+    height: 189px;
+    background: #EEEEEE;
+    text-align: center;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 37px;
+}
