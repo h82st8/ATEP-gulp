@@ -10,7 +10,7 @@
 }
 
 .header__item {
-	margin   : 50-17px 0 50-5px;
+	margin   : 50-15px 0 50-6px;
 	min-width: 250px;
 }
 
@@ -24,4 +24,8 @@
 	margin-left: auto;
 
 	transform: translate(-7px, 1px);
+}
+
+.header__accessible:focus {
+	left: -60px;
 }
