@@ -11,7 +11,7 @@ const gulp         = require('gulp'),
 			uglify       = require('gulp-uglify'),
 			imagemin     = require('gulp-imagemin'),
 			imgCompress  = require('imagemin-jpeg-recompress'),
-			responsive   = require('gulp-responsive'),
+			// responsive   = require('gulp-responsive'),
 			webp         = require('gulp-webp'),
 			newer        = require('gulp-newer'),
 			bwsync       = require('browser-sync').create();
@@ -123,17 +123,17 @@ gulp.task('imgx', function() {
 	return gulp.src(path.src.img)
 		.pipe(plumber())
 		.pipe(newer(path.build.img))
-		.pipe(responsive({
-			'*': [{
-				width: '50%',
-				quality: 90,
-				rename: { prefix: 'x2/', },
-				}, {
-				width: '33%',
-				quality: 90,
-				rename: { prefix: 'x1/', },
-			}]
-		}))
+		// .pipe(responsive({
+		// 	'*': [{
+		// 		width: '50%',
+		// 		quality: 90,
+		// 		rename: { prefix: 'x2/', },
+		// 		}, {
+		// 		width: '33%',
+		// 		quality: 90,
+		// 		rename: { prefix: 'x1/', },
+		// 	}]
+		// }))
 		.pipe(gulp.dest(path.build.img));
 });
 
