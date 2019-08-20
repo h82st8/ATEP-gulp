@@ -1,6 +1,7 @@
 .footer {
 	padding-top: 16px;
-	background: $second-color-background;
+
+	background : $second-color-background;
 }
 
 .footer__wrapper {
@@ -17,8 +18,8 @@
 }
 
 .footer__item--menu {
-	width: 100%;
 	margin-bottom: 21px;
+	width        : 100%;
 }
 
 .main-nav__link--footer {
@@ -39,20 +40,25 @@
 }
 
 .footer__item--slogan {
-	padding: 7px 165px;
+	padding       : 7px 165px;
+
 	@include font($main-font-family, 1.2em, normal, 1.33, $main-text-color, $second-color-background);
-	text-align: center;
+
+	text-align    : center;
 	text-transform: capitalize;
 }
 
 .footer__form {
-	padding: 5px;
 	@include flex(column, center);
+
+	padding: 5px;
+
 	@include font($main-font-family, 1em, normal, 1.35, $main-text-color, $second-color-background);
 }
 
 .footer__form {
 	margin-bottom: 47px;
+
 	text-align: center;
 }
 
@@ -62,9 +68,10 @@
 
 .footer__form-input {
 	margin-top: 27px;
-	padding: 11px 0;
-	border: none;
-	width: 270px;
+	padding   : 11px 0;
+	width     : 270px;
+
+	border    : none;
 
 	&::placeholder {
 		color: hsla(0, 0%, 0%, 0.21);
@@ -72,9 +79,13 @@
 }
 
 .footer__form-button {
-	font-size: 16px;
+	margin-top : 15px;
+	padding    : 13px;
+
+	font-size  : 16px;
 	line-height: 21px;
-	padding: 13px;
+
+	align-self : center;
 }
 
 .footer__form-button:disabled {

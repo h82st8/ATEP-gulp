@@ -1,10 +1,10 @@
 .header {
-	position: relative;
+	position   : relative;
 
 	@include flex(row, center);
 
-	margin  : 0 auto;
-	width   : $main-unit;
+	margin     : 0 auto;
+	width      : $main-unit;
 
 	align-items: baseline;
 }
@@ -17,13 +17,13 @@
 .header__item--logo {
 	margin-right: auto;
 
-	transform: translate(-86px, 12px);
+	transform   : translate(-86px, 12px);
 }
 
 .header__item--user-menu {
 	margin-left: auto;
 
-	transform: translate(-7px, 1px);
+	transform  : translate(-7px, 1px);
 }
 
 .header__accessible:focus {

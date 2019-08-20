@@ -87,6 +87,7 @@
 	&[href]:hover,
 	&[href]:focus span {
 		font-weight: 600;
+
 		text-shadow: 1px 1px 0px #dddddd;
 
 		&:nth-child(1){
@@ -189,13 +190,13 @@
 	z-index    : 19;
 
 	display    : none;
-	visibility: hidden;
-	opacity: 0;
+	visibility : hidden;
 
 	padding-top: 56px;
 
 	transform  : translateX(-50%);
 
+	opacity    : 0;
 	background : transparent;
 }
 
@@ -204,9 +205,10 @@
 .main-nav__item:focus + .main-nav__submenu-wrapper,
 .main-nav__submenu-wrapper:hover,
 .main-nav__submenu-wrapper:focus {
+	display   : block;
 	visibility: visible;
-	opacity: 1;
-	display: block;
+
+	opacity   : 1;
 }
 
 .main-nav__submenu {
@@ -294,8 +296,8 @@
 }
 
 .main-nav__submenu__accessible:focus {
+	top : 75px;
 	left: 20px;
-	top: 75px;
 }
 
 .main-nav__link--footer {
