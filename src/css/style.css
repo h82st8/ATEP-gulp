@@ -365,25 +365,25 @@ body {
   border: 0 !important; }
 
 .accessible {
-  left: -9999px;
   position: absolute;
   top: auto;
+  left: -9999px;
+  z-index: -9999;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  z-index: -9999;
   color: #000000;
   text-decoration: none; }
 
 .accessible:focus {
-  left: 0;
   top: 15px;
-  width: auto;
-  height: auto;
+  left: 0;
+  z-index: 999;
   overflow: auto;
   padding: 5px;
-  text-align: center;
-  z-index: 999; }
+  width: auto;
+  height: auto;
+  text-align: center; }
 
 .logo__link span {
   color: #ff0000; }
@@ -401,21 +401,21 @@ body {
     border-radius: 50%;
     background: #ff0000; }
 
-.main-slider {
-  width: 100%;
-  height: 3733px;
-  background: #000000; }
-
 .form-button {
   display: block;
   padding: 15px;
-  border: none;
-  border-radius: 5px;
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 1.067em;
   font-weight: normal;
   line-height: 1;
   color: #ffffff;
+  background: #000000;
+  border: none;
+  border-radius: 5px; }
+
+.main-slider {
+  width: 100%;
+  height: 768px;
   background: #000000; }
 
 .header {
@@ -687,11 +687,11 @@ body {
   z-index: 19;
   display: none;
   visibility: hidden;
-  opacity: 0;
   padding-top: 56px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  opacity: 0;
   background: transparent; }
 
 .main-nav__link:hover + .main-nav__submenu-wrapper,
@@ -699,9 +699,9 @@ body {
 .main-nav__item:focus + .main-nav__submenu-wrapper,
 .main-nav__submenu-wrapper:hover,
 .main-nav__submenu-wrapper:focus {
+  display: block;
   visibility: visible;
-  opacity: 1;
-  display: block; }
+  opacity: 1; }
 
 .main-nav__submenu {
   z-index: 20;
@@ -793,8 +793,8 @@ body {
     background: #ff0000; }
 
 .main-nav__submenu__accessible:focus {
-  left: 20px;
-  top: 75px; }
+  top: 75px;
+  left: 20px; }
 
 .main-nav__link--footer {
   background: #ffe9e2; }
@@ -915,8 +915,8 @@ body {
   background: #ffe9e2; }
 
 .footer__item--menu {
-  width: 100%;
-  margin-bottom: 21px; }
+  margin-bottom: 21px;
+  width: 100%; }
 
 .main-nav__link--footer {
   font-family: "Segoe UI", "Arial", sans-serif;
@@ -959,7 +959,6 @@ body {
   text-transform: capitalize; }
 
 .footer__form {
-  padding: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -973,6 +972,7 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 5px;
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 1em;
   font-weight: normal;
@@ -1002,8 +1002,8 @@ body {
 .footer__form-input {
   margin-top: 27px;
   padding: 11px 0;
-  border: none;
-  width: 270px; }
+  width: 270px;
+  border: none; }
   .footer__form-input::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.21); }
   .footer__form-input::-moz-placeholder {
@@ -1016,10 +1016,10 @@ body {
     color: rgba(0, 0, 0, 0.21); }
 
 .footer__form-button {
+  margin-top: 15px;
+  padding: 13px;
   font-size: 16px;
   line-height: 21px;
-  padding: 13px;
-  margin-top: 15px;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center; }
