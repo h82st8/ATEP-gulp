@@ -154,36 +154,43 @@
 	</header>
 
 	<section class="market-headers">
-		On Salvatore Ferragamo’s New Chapter <br> Homepage Fashion On Salvatore Ferragamo’s New Chapter
+		<span class="market-headers__title">On&nbsp;Salvatore Ferragamo&rsquo;s New Chapter <br> Homepage&nbsp;Fashion
+			On&nbsp;Salvatore Ferragamo&rsquo;s New Chapter</span>
 	</section>
-	<main class="main-content wrapper">
-		<figure class="blog-img">
-			<img src="img/image14.1.png" alt="" class="image-blog">
-			<figcaption class="image-blog__caption">
+
+	<main class="main-content main-wrapper">
+
+		<figure class="blog-figure">
+			<img src="img/x3/image14.1.png" alt="Интерьер" title="Интерьер" class="blog-figure__image">
+			<figcaption class="blog-figure__caption">
 				It Is A Long Established Fact That A Reader Will <br> BY : ADMIN | 3 COMMENTS
 			</figcaption>
 		</figure>
-		<p class="text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+
+		<p class="main-content__text-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+			roots in a
 			piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
 			professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
 			from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
 			undoubtable source.</p>
-		<blockquote class="text-content__blackquote">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-				dolore d aliqua. Ut enim ad minim veniam,</p>
-		</blockquote class="text-content__blackquote">
-		<p class="text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+		<blockquote class="main-content__blackquote">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+			dolore d aliqua. Ut enim ad minim veniam,
+		</blockquote>
+		<p class="main-content__text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			Lorem Ipsum
 			has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
 			type and scrambled it to make a type specimen book Contrary to popular belief.</p>
 	</main>
-	<section class="comments wrapper">
-		<h2>3 comments</h2> <!-- Need class -->
+
+	<section class="comments main-wrapper">
+		<header class="comments__header">3 comments</header>
 		<ul class="comments__list">
 			<li class="comments__item">
-				<div class="left">
-					<img src="img/image15.2.png" alt="user image" title="user image" class="comments__user-img">
+				<div class="comments__item__left">
+					<img src="img/x3/image15.2.png" alt="user image" title="user image" class="comments__user-img">
 				</div>
-				<div class="right">
+				<div class="comments__item__right">
 					<h3 class="comments__user-name">Fatema Asrafi</h3>
 					<time datetime="2019-05-17T01:59">May 17, 2018 at 1:59 am</time>
 					<blockquote class="comments__user-blockquote">To link your Facebook and Twitter accounts, open the
@@ -192,10 +199,10 @@
 				</div>
 			</li>
 			<li class="comments__item">
-				<div class="left">
-					<img src="img/image15.2.png" alt="user image" title="user image" class="comments__user-img">
+				<div class="comments__item__left">
+					<img src="img/x3/image15.2.png" alt="user image" title="user image" class="comments__user-img">
 				</div>
-				<div class="right">
+				<div class="comments__item__right">
 					<h3 class="comments__user-name">Fatema Asrafi</h3>
 					<time datetime="2019-05-17T01:59">May 17, 2018 at 1:59 am</time>
 					<blockquote class="comments__user-blockquote">To link your Facebook and Twitter accounts, open the
@@ -204,10 +211,10 @@
 				</div>
 			</li>
 			<li class="comments__item">
-				<div class="left">
-					<img src="img/image15.2.png" alt="user image" title="user image" class="comments__user-img">
+				<div class="comments__item__left">
+					<img src="img/x3/image15.2.png" alt="user image" title="user image" class="comments__user-img">
 				</div>
-				<div class="right">
+				<div class="comments__item__right">
 					<h3 class="comments__user-name">Fatema Asrafi</h3>
 					<time datetime="2019-05-17T01:59">May 17, 2018 at 1:59 am</time>
 					<blockquote class="comments__user-blockquote">To link your Facebook and Twitter accounts, open the
@@ -216,19 +223,20 @@
 				</div>
 			</li>
 		</ul>
-		<form action="#" method="POST" class="add-comments">
-			<h4>Оставь свой комментарий</h4>
-			<label for="your-review">Your review*</label>
-				<textarea name="your-review" id="your-review" cols="30" rows="10"></textarea>
-			<label for="name">Name*</label>
-				<input id="name" type="text">
-			<label for="email">E-Mail*</label>
-				<input id="email" type="email" name="" id="">
-			<input class="send-form" type="submit" value="Добавить комментарий">
+
+		<form action="#" method="POST" class="comments-form">
+			<h4 class="comments-form__header">Оставь свой комментарий</h4>
+			<label class="comments-form__label-comments" for="your-review">Your review*</label>
+			<textarea class="comments-form__textarea" name="your-review" id="your-review" cols="30" rows="10"></textarea>
+			<label class="comments-form__label-name" for="name">Name*</label>
+			<input class="comments-form__input-name" id="name" type="text">
+			<label class="comments-form__label-email" for="email">E-Mail*</label>
+			<input class="comments-form__input-email"id="email" type="email" name="" id="">
+			<img class="comments-form__captcha" src="img/x3/rectangle-5.jpg" alt="">
+			<input class="comments-form__submit" type="submit" value="Добавить комментарий">
 		</form>
 	</section>
 
-	<!-- <section class="main-slider"></section> -->
 	<footer class="footer">
 		<div class="footer__wrapper">
 			<nav class="footer__item footer__item--menu">

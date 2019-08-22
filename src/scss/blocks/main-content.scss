@@ -1,131 +1,25 @@
 .main-content {
     margin-top: 75px;
-}
 
-.blog-img {
-    margin: 0;
-}
-
-.image-blog__caption {
-    margin-top: 14px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 19px;
-}
-
-.text-content {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
-    line-height: 34px;
-}
-
-.text-content__blackquote {
-    margin-left: 120px;
-    padding-left: 14px;
-    border-left: 2px solid black;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
-    line-height: 34px;
-}
-
-.comments {
-    margin-top: 69px;
-}
-
-.comments__list {
-    margin-top: 75px;
-    list-style: none;
-    padding-left: 0;
-}
-
-.comments__item {
-    width: 1056px;
-    padding-top: 31px;
-    padding-bottom: 31px;
-    border-top: 1px solid #D6D6D6;
-    @include flex(row, center);
-
-}
-
-.comments__item:nth-child(2n) {
-    .left {
-        margin-left: 117px;
-    }
-}
-
-.comments__user-img {
-    width: 116px;
-}
-
-.right {
-    width: 907px;
-    margin-left: 33px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
-    line-height: 34px;
-
-    .comments__user-name {
-        margin-top: 0;
-    }
-
-    .comments__user-blockquote {
-        margin-left: 0;
-    }
-
-}
-
-.add-comments {
-    width: 936px;
-    margin-left: 147px;
-    margin-bottom: 51px;
-    @include flex(column, center);
-
-    h4 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 23px;
-        line-height: 34px;
+    .blog-figure {
         margin: 0;
+    
+        .blog-figure__caption {
+            margin-top: 14px;
+            @include font($accent-font-family, 13px, normal, 19px, $main-text-color, none);
+        }
     }
 
-    label,
-    textarea,
-    input {
-        margin-top: 30px;
+    .main-content__text-content {
+        @include font($accent-font-family, 23px, normal, 34px, $main-text-color, none);
+        letter-spacing: 1.4px;
     }
-
-    label {
-        font-family: Segoe UI;
-        font-size: 20px;
-        line-height: 27px;
-    }
-
-    textarea {
-        width: 930px;
-        height: 342px;
-        border-radius: 10px;
-        border: 1px solid #D1D1D1;
-    }
-
-    input {
-        width: 930px;
-        height: 70px;
-        border-radius: 10px;
-        outline: 0;
-        border: 1px solid #D1D1D1;
-    }
-
-    .send-form {
-        width: 270px;
-        height: 49px;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 4px;
-        background-color: #fff;
-        margin-left: auto;
+    
+    .main-content__blackquote {
+        margin-left: 115px;
+        padding-left: 14px;
+        border-left: 2px solid black;
+        @include font($accent-font-family, 23px, normal, 34px, $main-text-color, none);
+        letter-spacing: 1.4px;
     }
 }
