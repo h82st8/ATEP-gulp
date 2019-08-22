@@ -403,10 +403,10 @@ body {
 
 .form-button {
   display: block;
-  padding: 15px;
+  padding: 18px;
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 1.067em;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1;
   color: #ffffff;
   background: #000000;
@@ -417,6 +417,18 @@ body {
   width: 100%;
   height: 768px;
   background: #000000; }
+
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5); }
+
+body .modal-show {
+  display: block; }
 
 .header {
   position: relative;
@@ -814,7 +826,6 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-left: 0;
-  width: 192px;
   list-style: none; }
 
 .user-menu__item {
@@ -882,7 +893,7 @@ body {
   display: block; }
 
 .footer {
-  padding-top: 16px;
+  padding: 16px 0 24px;
   background: #ffe9e2; }
 
 .footer__wrapper {
@@ -1026,3 +1037,274 @@ body {
 
 .footer__form-button:disabled {
   display: none; }
+
+.modal-login {
+  display: none; }
+
+.modal-login__form {
+  position: absolute;
+  top: 46.8%;
+  left: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 37px 143px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.65); }
+
+.modal-login__title {
+  position: relative;
+  margin: 0 0 28px;
+  padding: 0 0 13px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 1.333em;
+  font-weight: bold;
+  line-height: 1.35;
+  color: #ffffff;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase; }
+  .modal-login__title::after {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    left: 30px;
+    height: 0.9px;
+    content: "";
+    background: #ffffff; }
+
+.modal-login__label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.modal-login__input {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 9px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 344px;
+  font-family: Baskerville Old Face;
+  font-size: 1.333em;
+  font-weight: normal;
+  line-height: 1;
+  color: #C7C7C7;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff; }
+  .modal-login__input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-login__input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-login__input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-login__input::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-login__input::placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+
+.modal-login__input--captcha {
+  position: relative;
+  overflow: hidden;
+  margin-top: 4px;
+  padding: 0;
+  width: 280px;
+  height: 49px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
+  .modal-login__input--captcha::before {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: #ffffff url(../img/x3/recaptcha.jpg) no-repeat;
+    background-size: contain; }
+
+.modal-login__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+  .modal-login__buttons span {
+    margin: 10px;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.33;
+    color: #000000;
+    background: transparent; }
+
+.modal-login__button {
+  min-width: 146px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.modal-login__button-login {
+  margin-bottom: 4px;
+  width: 100%; }
+
+.modal-login__link {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 0.733em;
+  font-weight: 500;
+  line-height: 1.36;
+  color: #000000;
+  background: transparent;
+  text-decoration: none; }
+
+.modal-recovery {
+  display: none; }
+
+.modal-recovery__form {
+  position: absolute;
+  top: 46.5%;
+  left: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 67px 143px 91px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.65); }
+
+.modal-recovery__title {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 0 13px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 1.333em;
+  font-weight: bold;
+  line-height: 1.35;
+  color: #ffffff;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase; }
+  .modal-recovery__title::after {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    left: 30px;
+    height: 0.9px;
+    content: "";
+    background: #ffffff; }
+
+.modal-recovery__text {
+  padding: 0;
+  margin: 3px 0;
+  width: 344px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 0.733em;
+  font-weight: bold;
+  line-height: 1.35;
+  color: #000000;
+  background: transparent; }
+
+.modal-recovery__input {
+  position: relative;
+  padding: 9px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 344px;
+  font-family: Baskerville Old Face;
+  font-size: 1.333em;
+  font-weight: normal;
+  line-height: 1;
+  color: #C7C7C7;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff; }
+  .modal-recovery__input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-recovery__input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-recovery__input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-recovery__input::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+  .modal-recovery__input::placeholder {
+    color: rgba(0, 0, 0, 0.21); }
+
+.modal-recovery__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 13px;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+
+.modal-recovery__button {
+  width: 160px;
+  white-space: pre-line;
+  padding: 6px 18px;
+  line-height: 1.31; }
+  .modal-recovery__button:first-child {
+    margin-right: auto; }

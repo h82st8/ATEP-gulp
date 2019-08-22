@@ -1,0 +1,87 @@
+.modal-recovery {
+	display: none;
+}
+
+.modal-recovery__form {
+	position     : absolute;
+	top          : 46.5%;
+	left         : 50%;
+
+	@include flex(column, space-between);
+
+	padding      : 67px 143px 91px;
+
+	transform    : translate(-50%, -50%);
+
+	border-radius: 25px;
+	background   : hsla(0, 0%, 100%, .65);
+}
+
+.modal-recovery__title {
+	position      : relative;
+
+	margin        : 0 0 10px;
+	padding       : 0 0 13px;
+
+	@include font($main-font-family, 1.333em, bold, 1.35, #ffffff, transparent);
+
+	text-align    : center;
+	text-transform: uppercase;
+
+	&::after {
+		position  : absolute;
+		right     : 30px;
+		bottom    : 0;
+		left      : 30px;
+
+		height    : 0.9px;
+
+		content   : "";
+
+		background: #ffffff;
+	}
+}
+
+.modal-recovery__text {
+	padding: 0;
+	margin : 3px 0;
+	width  : 344px;
+	@include font($main-font-family, 0.733em, bold, 1.35, #000000, transparent);
+}
+
+.modal-recovery__input {
+	position     : relative;
+
+	padding      : 9px 15px;
+	box-sizing   : border-box;
+	width        : 344px;
+
+	@include font(Baskerville Old Face, 1.333em, normal, 1, #C7C7C7, #ffffff);
+
+	border       : none;
+	border-radius: 5px;
+	background   : #ffffff;
+
+	&::placeholder {
+		color: hsla(0, 0%, 0%, 0.21);
+	}
+}
+
+.modal-recovery__buttons {
+	@include flex(row, center);
+
+	margin-top : 13px;
+
+	align-items: baseline;
+}
+
+.modal-recovery__button {
+	width      : 160px;
+	white-space: pre-line;
+	padding    : 6px 18px;
+	line-height: 1.31;
+
+	&:first-child {
+		margin-right: auto;
+	}
+}

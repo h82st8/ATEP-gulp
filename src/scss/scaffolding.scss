@@ -93,9 +93,9 @@ body {
 .form-button {
 	display      : block;
 
-	padding      : 15px;
+	padding      : 18px;
 
-	@include font($main-font-family, 1.067em, normal, $main-line-height, #ffffff, #000000);
+	@include font($main-font-family, 1.067em, 500, $main-line-height, #ffffff, #000000);
 
 	border       : none;
 	border-radius: 5px;
@@ -106,4 +106,20 @@ body {
 	height    : 768px;
 
 	background: $main-slider-background;
+}
+
+.modal-wrapper {
+	position  : absolute;
+	top       : 0;
+	right     : 0;
+	bottom    : 0;
+	left      : 0;
+
+	display   : none;
+
+	background: hsla(0, 0%, 0%, .5);
+}
+
+body .modal-show {
+	display: block;
 }
