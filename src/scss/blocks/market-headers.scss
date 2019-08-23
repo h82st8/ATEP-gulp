@@ -1,0 +1,13 @@
+.market-headers { 
+    @include flex(row, center);
+    align-items: center;
+    height: 189px;
+    background: #EEEEEE;
+    
+    .market-headers__title{
+        width: 741px;
+        @include font($accent-font-family, 25px, normal, 37px, $main-text-color, none);
+        text-align: center;
+    }
+}
+
