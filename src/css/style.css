@@ -418,6 +418,9 @@ body {
   height: 768px;
   background: #000000; }
 
+.modal-login {
+  display: none; }
+
 .header {
   position: relative;
   display: -webkit-box;
