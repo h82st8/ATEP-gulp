@@ -1,16 +1,16 @@
 .footer {
-	padding-top: 16px;
+	padding   : 16px 0 24px;
 
-	background : $second-color-background;
+	background: $second-color-background;
 }
 
 .footer__wrapper {
 	@include flex(column, flex-start);
 
-	margin: 0 auto;
-	width : 690px;
+	margin        : 0 auto;
+	width         : 690px;
 
-	align-items: center;
+	align-items   : center;
 }
 
 .footer__item {
