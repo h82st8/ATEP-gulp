@@ -1,8 +1,8 @@
-.modal-login {
+.modal {
 	display: none;
 }
 
-.modal-login__form {
+.modal__form {
 	position     : absolute;
 	top          : 46.8%;
 	left         : 50%;
@@ -17,7 +17,7 @@
 	background   : hsla(0, 0%, 100%, .65);
 }
 
-.modal-login__title {
+.modal__title {
 	position      : relative;
 
 	margin        : 0 0 28px;
@@ -42,11 +42,23 @@
 	}
 }
 
-.modal-login__label {
+.modal__title--recovery {
+	margin        : 0 0 10px;
+}
+
+.modal__label {
 	@include flex(column, center);
 }
 
-.modal-login__input {
+.modal__text {
+	margin : 3px 0;
+	padding: 0;
+	width  : 344px;
+
+	@include font($main-font-family, 0.733em, bold, 1.35, #000000, transparent);
+}
+
+.modal__input {
 	position     : relative;
 
 	margin-bottom: 10px;
@@ -65,7 +77,11 @@
 	}
 }
 
-.modal-login__input--captcha {
+.modal__input--recovery {
+	margin-bottom: 0;
+}
+
+.modal__input--captcha {
 	position  : relative;
 
 	overflow  : hidden;
@@ -91,7 +107,7 @@
 	}
 }
 
-.modal-login__buttons {
+.modal__buttons {
 	@include flex(row, center);
 
 	margin-top : 5px;
@@ -105,21 +121,44 @@
 	}
 }
 
-.modal-login__button {
-	min-width: 146px;
+.modal__buttons--recovery {
+	margin-top    : 13px;
+	padding-bottom: 25px;
+}
+
+.modal__button {
+	box-sizing: border-box;
+	min-width : 130px;
 
 	text-align: center;
 
-	flex-grow: 1;
+	flex-grow : 1;
 }
 
-.modal-login__button-login {
+.modal__button--recovery {
+	padding    : 6px 18px;
+	width      : 160px;
+
+	line-height: 1.31;
+
+	white-space: pre-line;
+
+	&:first-child {
+		margin-right: 25px;
+	}
+}
+
+.modal__button--login {
 	margin-bottom: 4px;
-	width: 100%;
+	width        : 100%;
 }
 
-.modal-login__link {
+.modal__link {
 	@include font($main-font-family, 0.733em, 500, 1.36, #000000, transparent);
 
 	text-decoration: none;
+}
+
+.modal--show {
+	display: block;
 }

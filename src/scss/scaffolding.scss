@@ -91,21 +91,16 @@ body {
 }
 
 .form-button {
-	display      : block;
+	display        : block;
 
-	padding      : 18px;
+	padding        : 18px;
 
 	@include font($main-font-family, 1.067em, 500, $main-line-height, #ffffff, #000000);
 
-	border       : none;
-	border-radius: 5px;
-}
+	text-decoration: none;
 
-.main-slider {
-	width     : 100%;
-	height    : 768px;
-
-	background: $main-slider-background;
+	border         : none;
+	border-radius  : 5px;
 }
 
 .modal-wrapper {
@@ -120,6 +115,9 @@ body {
 	background: hsla(0, 0%, 0%, .5);
 }
 
-body .modal-show {
-	display: block;
+.main-slider {
+	width     : 100%;
+	height    : 768px;
+
+	background: $main-slider-background;
 }
