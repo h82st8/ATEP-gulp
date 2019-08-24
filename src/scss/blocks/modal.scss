@@ -1,20 +1,22 @@
 .modal {
-	display: none;
-}
-
-.modal__form {
-	position     : absolute;
+	position     : fixed;
 	top          : 46.8%;
 	left         : 50%;
 
-	@include flex(column, space-between);
+	display      : none;
 
 	padding      : 37px 143px;
+	box-sizing   : border-box;
+	width        : 630px;
 
 	transform    : translate(-50%, -50%);
 
 	border-radius: 25px;
 	background   : hsla(0, 0%, 100%, .65);
+}
+
+.modal__form {
+	@include flex(column, space-between);
 }
 
 .modal__title {
@@ -23,7 +25,7 @@
 	margin        : 0 0 28px;
 	padding       : 0 0 13px;
 
-	@include font($main-font-family, 1.333em, bold, 1.35, #ffffff, transparent);
+	@include font($main-font-family, 1.333em, bold, 1.35, $modal-text-color, transparent);
 
 	text-align    : center;
 	text-transform: uppercase;
@@ -38,12 +40,12 @@
 
 		content   : "";
 
-		background: #ffffff;
+		background: $modal-text-color;
 	}
 }
 
 .modal__title--recovery {
-	margin        : 0 0 10px;
+	margin: 0 0 10px;
 }
 
 .modal__label {
@@ -55,7 +57,7 @@
 	padding: 0;
 	width  : 344px;
 
-	@include font($main-font-family, 0.733em, bold, 1.35, #000000, transparent);
+	@include font($main-font-family, 0.733em, bold, 1.35, $modal-text-second-color, transparent);
 }
 
 .modal__input {
@@ -66,14 +68,14 @@
 	box-sizing   : border-box;
 	width        : 344px;
 
-	@include font(Baskerville Old Face, 1.333em, normal, 1, #C7C7C7, #ffffff);
+	@include font(Baskerville Old Face, 1.333em, normal, 1, $main-text-color, $modal-text-color);
 
 	border       : none;
 	border-radius: 5px;
-	background   : #ffffff;
+	background   : $modal-text-color;
 
 	&::placeholder {
-		color: hsla(0, 0%, 0%, 0.21);
+		color: $input-text-color;
 	}
 }
 
@@ -121,6 +123,14 @@
 	}
 }
 
+.modal__button-group {
+	min-width : 130px;
+
+	text-align: center;
+
+	flex-grow : 1;
+}
+
 .modal__buttons--recovery {
 	margin-top    : 13px;
 	padding-bottom: 25px;
@@ -130,9 +140,19 @@
 	box-sizing: border-box;
 	min-width : 130px;
 
+	color     : $modal-text-color;
+
 	text-align: center;
 
+	background: $modal-text-second-color;
+
 	flex-grow : 1;
+
+	&:hover,
+	&:focus {
+		border-color: #111111;
+		background  : #111111;
+	}
 }
 
 .modal__button--recovery {
@@ -154,11 +174,114 @@
 }
 
 .modal__link {
-	@include font($main-font-family, 0.733em, 500, 1.36, #000000, transparent);
+	position: relative;
+
+	@include font($main-font-family, 0.733em, 500, 1.36, $modal-text-second-color, transparent);
 
 	text-decoration: none;
+
+	&::before {
+		position  : absolute;
+		bottom    : 0;
+		left      : 0;
+
+		width     : 0;
+		height    : 1px;
+
+		content   : '';
+		transition: all 300ms ease;
+
+		background: $modal-text-second-color;
+	}
+
+	&:hover {
+		font-weight: 700;
+
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.modal--like-login {
+	top    : 42%;
+
+	@include flex(row, space-between);
+
+	padding: 37px 30px;
+}
+
+.modal__article-photo {
+	overflow     : hidden;
+
+	margin-top   : 19px;
+	width        : 207px;
+	height       : 273px;
+
+	border-radius: 10px;
+}
+
+.modal__form--like-login {
+	width: 344px;
 }
 
 .modal--show {
-	display: block;
+	display: flex;
+}
+
+.modal--page {
+	position      : relative;
+	top           : 0;
+	left          : 0;
+
+	display       : flex;
+
+	margin        : 0 auto;
+	padding-bottom: 100px;
+
+	transform     : translate(0, 0);
+
+	border-top    : 1px solid $main-text-color;
+	border-radius : 0;
+}
+
+.modal__title--page {
+	color: $modal-page-text-color;
+
+	&.modal__title--recovery {
+		margin-bottom: 30px;
+	}
+
+	&:after {
+		background: $modal-page-text-color;
+	}
+}
+
+.modal__input--page {
+	margin-bottom: 20px;
+
+	border       : 1px solid $border-form-color ;
+}
+
+.modal__button--page {
+	color       : $main-text-color;
+
+	border-color: $main-text-color;
+	background  : $main-color-background;
+
+	&.modal__button--recovery {
+		margin-top: 20px;
+	}
+
+	&:hover,
+	&:focus {
+		color       : $main-color-background;
+
+		border-color: $main-text-color;
+		background  : $main-text-color;
+	}
+}
+
+.modal__article-photo--page {
+	border-radius: 3px;
 }

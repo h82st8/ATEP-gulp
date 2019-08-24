@@ -1,7 +1,7 @@
 .footer {
 	padding   : 16px 0 24px;
 
-	background: $second-color-background;
+	background: $second-background;
 }
 
 .footer__wrapper {
@@ -14,7 +14,7 @@
 }
 
 .footer__item {
-	@include font($main-font-family, 1.333em, normal, 1.35, $main-text-color, $second-color-background);
+	@include font($main-font-family, 1.333em, normal, 1.35, $main-text-color, $second-background);
 }
 
 .footer__item--menu {
@@ -23,7 +23,7 @@
 }
 
 .main-nav__link--footer {
-	@include font($main-font-family, 1em, normal, 1.35, $main-text-color, $second-color-background);
+	@include font($main-font-family, 1em, normal, 1.35, $main-text-color, $second-background);
 }
 
 .footer__nav-menu {
@@ -42,7 +42,7 @@
 .footer__item--slogan {
 	padding       : 7px 165px;
 
-	@include font($main-font-family, 1.2em, normal, 1.33, $main-text-color, $second-color-background);
+	@include font($main-font-family, 1.2em, normal, 1.33, $main-text-color, $second-background);
 
 	text-align    : center;
 	text-transform: capitalize;
@@ -53,13 +53,13 @@
 
 	padding: 5px;
 
-	@include font($main-font-family, 1em, normal, 1.35, $main-text-color, $second-color-background);
+	@include font($main-font-family, 1em, normal, 1.35, $main-text-color, $second-background);
 }
 
 .footer__form {
 	margin-bottom: 47px;
 
-	text-align: center;
+	text-align   : center;
 }
 
 .footer__form-label {
@@ -67,27 +67,38 @@
 }
 
 .footer__form-input {
-	margin-top: 27px;
-	padding   : 11px 0;
-	width     : 270px;
+	margin-top : 27px;
+	padding    : 11px 0;
+	width      : 270px;
 
-	border    : none;
+	line-height: 1.35;
+	border     : none;
+	background : hsla(0, 0%, 100%, .53);
 
 	&::placeholder {
-		color: hsla(0, 0%, 0%, 0.21);
+		color: $input-text-color;
 	}
 }
 
 .footer__form-button {
-	margin-top : 15px;
+	margin     : 15px 0 -40px;
 	padding    : 13px;
 
 	font-size  : 16px;
 	line-height: 21px;
 
 	align-self : center;
+	background : $second-background;
 }
 
 .footer__form-button:disabled {
 	display: none;
+}
+
+.no-js .footer__form-button:disabled {
+	display: block;
+}
+
+.footer__item--info {
+	color: rgba(0, 0, 0, 0.4);
 }
