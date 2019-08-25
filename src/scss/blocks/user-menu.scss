@@ -23,7 +23,8 @@
 	}
 
 	&:hover .user-menu__icon,
-	&:focus .user-menu__icon {
+	&:focus .user-menu__icon,
+	&:not([href]) .user-menu__icon {
 		transform       : scale(1.15);
 		transition-delay: .3s;
 	}
