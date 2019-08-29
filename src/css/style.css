@@ -919,6 +919,7 @@ body {
   display: block; }
 
 .market-headers {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -947,6 +948,9 @@ body {
     color: #000000;
     background: none;
     text-align: center; }
+
+.market-headers__accessible:focus {
+  left: 300px; }
 
 .main-content {
   margin-top: 75px; }
