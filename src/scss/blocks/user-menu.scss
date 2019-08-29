@@ -2,24 +2,29 @@
 	@include flex(row, flex-end);
 
 	padding-left: 0;
-	width       : 192px;
 
 	list-style  : none;
 }
 
 .user-menu__item {
-	padding: 12px;
+	margin      : 7px;
+	margin-right: 9px;
+}
 
-	&:last-child {
-		margin-right: 0;
-	}
+.user-menu__link {
+	display: block;
+	width  : 22px;
+	height : 22px;
+	padding: 4px;
 
-	a .user-menu__icon {
+
+	.user-menu__icon {
 		transition: all 0.3s ease;
 	}
 
-	a:hover .user-menu__icon,
-	a:focus .user-menu__icon {
+	&:hover .user-menu__icon,
+	&:focus .user-menu__icon,
+	&:not([href]) .user-menu__icon {
 		transform       : scale(1.15);
 		transition-delay: .3s;
 	}
@@ -39,8 +44,8 @@
 
 .user-menu__number-purchases {
 	position     : absolute;
-	top          : 6px;
-	right        : 8px;
+	top          : -2px;
+	right        : -1px;
 
 	@include flex(row, center);
 

@@ -13,9 +13,15 @@ $logo-font-family                    : "Baskerville Old Face", serif;
 // color
 $main-text-color        : #000000;
 $main-color-background  : #ffffff;
-$second-color-background: #ffe9e2;
+$second-background      : #ffe9e2;
 $main-slider-background : #000000;
 $active-text-color      : #ff0000;
+$input-text-color       : #c7c7c7;
+$modal-text-color       : #ffffff;
+$modal-page-text-color  : #000000;
+$modal-text-second-color: #000000;
+$second-modal-background: #ffe9e2;
+$border-form-color      : #d1d1d1;
 
 //mixin
 @mixin flex($fx-direction, $fx-justify) {
