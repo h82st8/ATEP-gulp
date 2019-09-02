@@ -1,29 +1,48 @@
 .header {
-	position   : relative;
+	background : $main-color-background;
+	z-index    : z('header');
+}
 
+.header-animate {
+	height     : 133px;
+	position   : sticky;
+	transition : top .5s linear;
+	top        : -133px;
+
+	.header__item {
+		margin-top: 60px;
+	}
+}
+
+.header-show {
+	transition : top 1s linear;
+	box-shadow : 0 0 0 1px #eee;
+	top        : -45px;
+}
+
+.header-wrapper {
 	@include flex(row, center);
 
-	margin     : 0 auto;
-	width      : $main-unit;
-
-	align-items: baseline;
+	align-items : baseline;
+	min-height  : 133px;
 }
 
 .header__item {
-	margin   : 50-17px 0 50-5px;
-	min-width: 250px;
+	margin    : 50-17px 0 15px;
+	min-width : 250px;
 }
 
 .header__item--logo {
-	margin-right: auto;
+	margin-top   : 50-17+5px;
+	margin-right : auto;
 
-	transform   : translate(-86px, 12px);
+	transform    : translate(-85px, 6px);
 }
 
 .header__item--user-menu {
-	margin-left: auto;
+	margin-left : auto;
 
-	transform  : translate(-7px, 1px);
+	transform   : translate(-4px, 1px);
 }
 
 .header__accessible:focus {

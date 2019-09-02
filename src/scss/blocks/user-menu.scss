@@ -13,10 +13,9 @@
 
 .user-menu__link {
 	display: block;
-	width  : 22px;
-	height : 22px;
-	padding: 4px;
 
+	padding: 4px;
+	@include size(22px, 22px);
 
 	.user-menu__icon {
 		transition: all 0.3s ease;
@@ -25,12 +24,12 @@
 	&:hover .user-menu__icon,
 	&:focus .user-menu__icon,
 	&:not([href]) .user-menu__icon {
-		transform       : scale(1.15);
 		transition-delay: .3s;
+		transform       : scale(1.15);
 	}
 }
 
-.user-menu__item--like {
+.user-menu__item--favorites {
 	transform: translate(-2px, 1px);
 }
 
@@ -49,8 +48,7 @@
 
 	@include flex(row, center);
 
-	width        : 16px;
-	height       : 16px;
+	@include size(16px, 16px);
 
 	@include font($accent-font-family, 0.6em, 600, 1.44, #ffffff, #000000);
 
