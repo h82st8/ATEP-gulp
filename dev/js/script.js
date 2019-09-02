@@ -55,10 +55,21 @@ for (let i = 0; i < linkLogin.length; i++) {
 	popupWrapper.classList.add('modal--show');
 	popupLogin.classList.add('modal--show');
 	popupLogin.setAttribute('tabindex', '0');
+	focusRestrict();
 	popupLogin.focus();
 	});
 }
 
+function focusRestrict(event) {
+	if (popupLogin.classList.contains('modal--show')) {
+		document.addEventListener('focus', function(event) {
+			if ( popupLogin.classList.contains('modal--show') && !popupLogin.contains(event.target)) {
+				event.stopPropagation();
+				popupLogin.focus();
+			}
+		}, true);
+	}
+}
 
 linkRecovery.addEventListener('click', function(event) {
 	event.preventDefault();
