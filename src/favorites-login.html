@@ -112,7 +112,7 @@
 						<use xlink:href="img/sprite.svg#icon-cart"></use>
 					</svg>
 				</a></li>
-				<li class="user-menu__item user-menu__item--user"><a class="user-menu__link link-login"><span class="visually-hidden">Пользователь</span>
+				<li class="user-menu__item user-menu__item--user"><a href="login.html" class="user-menu__link link-login"><span class="visually-hidden">Пользователь</span>
 					<svg class="user-menu__icon" width="23" height="23">
 						<use xlink:href="img/sprite.svg#icon-user"></use>
 					</svg>
@@ -125,8 +125,16 @@
 			</ul>
 		</div>
 	</header>
-	<section class="modal modal--page" id="main-content">
-		<form action="" class="modal__form modal__form--page" method="post" name="login-form">
+	<section class="modal modal--favorites-login modal--page" id="main-content">
+		<picture class="modal__article-photo modal__article-photo--page">
+			<source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_desk.webp 1x, img/wx2/modal-favorites-img_desk.webp 2x, img/wx3/modal-favorites-img_desk.webp 3x">
+			<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_tab.webp 1x, img/wx2/modal-favorites-img_tab.webp 2x, img/wx3/modal-favorites-img_tab.webp 3x">
+			<source type="image/webp" srcset="img/wx1/modal-favorites-img_mob.webp 1x, img/wx2/modal-favorites-img_mob.webp 2x, img/wx3/modal-favorites-img_mob.webp 3x">
+			<source media="(min-width: 1220px)" srcset="img/modal-favorites-img_desk.jpg">
+			<source media="(min-width: 768px)" srcset="img/modal-favorites-img_tab.jpg">
+			<img class="image" src="img/modal-favorites-img_mob.jpg" alt="Favorit image">
+		</picture>
+		<form action="" class="modal__form modal__form--favorites-login modal__form--page" method="post" name="login-form">
 			<h3 class="modal__title modal__title--page">Вход</h3>
 			<label class="modal__label">
 				<input class="modal__input modal__input--page" type="email" id="email" name="login" placeholder="Email" required>
@@ -134,14 +142,14 @@
 			<label class="modal__label">
 				<input class="modal__input modal__input--page" name="pasword" type="password" pattern=”(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}” placeholder="Password" required>
 			</label>
-			<div class="modal__input modal__input--page modal__input--captcha g-recaptcha" id="recaptcha" data-sitekey="6LeBMLQUAAAAAMpIkzxAeI6yHx-dgA7k6XZaSZ2U"></div>
+			<div class="modal__input modal__input--captcha g-recaptcha modal__input--page" id="recaptcha" data-sitekey="6LeBMLQUAAAAAMpIkzxAeI6yHx-dgA7k6XZaSZ2U"></div>
 			<div class="modal__label modal__label--captchaError"></div>
 			<div class="modal__buttons">
 				<div class="modal__button-group">
-					<input class="modal__button modal__button--page modal__button--login form-button" type="submit" id="submit-login-login" name="submit_login-login" value="Войти">
+					<input class="modal__button modal__button--login form-button modal__button--page" type="submit" id="submit-login-login" name="submit_login-login" value="Войти">
 					<a href="#" class="modal__link link-recovery">Забыли пароль?</a>
 				</div><span>или</span>
-				<a class="modal__button modal__button--page form-button" href="#">Подписаться</a>
+				<a class="modal__button form-button modal__button--page" href="#">Подписаться</a>
 			</div>
 		</form>
 	</section>
@@ -170,6 +178,6 @@
 			<div class="footer__item footer__item--info">@ 2019 ATEP. ® All Right Reserved</div>
 		</div>
 	</footer>
-	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

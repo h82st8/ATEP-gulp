@@ -101,9 +101,9 @@
 			</ul>
 		</nav>
 		<ul class="header__item header__item--user-menu user-menu">
-			<li class="user-menu__item user-menu__item--like"><a class="user-menu__link"><span class="visually-hidden">Нравиться!</span>
+			<li class="user-menu__item user-menu__item--favorites"><a class="user-menu__link"><span class="visually-hidden">Нравиться!</span>
 				<svg class="user-menu__icon" width="21" height="21">
-					<use xlink:href="img/sprite.svg#icon-like"></use>
+					<use xlink:href="img/sprite.svg#icon-favorites"></use>
 				</svg>
 			</a></li>
 			<li class="user-menu__item user-menu__item--cart"><a href="#" class="user-menu__link"><span class="visually-hidden">В вашей корзине </span><span class="user-menu__number-purchases">0</span><span class="visually-hidden"> товаров</span>
@@ -123,16 +123,16 @@
 			</a></li>
 		</ul>
 	</header>
-	<div class="modal modal--like-login modal--page">
+	<div class="modal modal--favorites-login modal--page">
 		<picture class="modal__article-photo modal__article-photo--page">
-			<source type="image/webp" media="(min-width: 1300px)" srcset="img/wx1/modal-like-img_desk.webp 1x, img/wx2/modal-like-img_desk.webp 2x, img/wx3/modal-like-img_desk.webp 3x">
-			<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-like-img_tab.webp 1x, img/wx2/modal-like-img_tab.webp 2x, img/wx3/modal-like-img_tab.webp 3x">
-			<source type="image/webp" srcset="img/wx1/modal-like-img_mob.webp 1x, img/wx2/modal-like-img_mob.webp 2x, img/wx3/modal-like-img_mob.webp 3x">
-			<source media="(min-width: 1150px)" srcset="img/modal-like-img_desk.jpg">
-			<source media="(min-width: 768px)" srcset="img/modal-like-img_tab.jpg">
-			<img class="image" src="img/modal-like-img_mob.jpg">
+			<source type="image/webp" media="(min-width: 1300px)" srcset="img/wx1/modal-favorites-img_desk.webp 1x, img/wx2/modal-favorites-img_desk.webp 2x, img/wx3/modal-favorites-img_desk.webp 3x">
+			<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_tab.webp 1x, img/wx2/modal-favorites-img_tab.webp 2x, img/wx3/modal-favorites-img_tab.webp 3x">
+			<source type="image/webp" srcset="img/wx1/modal-favorites-img_mob.webp 1x, img/wx2/modal-favorites-img_mob.webp 2x, img/wx3/modal-favorites-img_mob.webp 3x">
+			<source media="(min-width: 1150px)" srcset="img/modal-favorites-img_desk.jpg">
+			<source media="(min-width: 768px)" srcset="img/modal-favorites-img_tab.jpg">
+			<img class="image" src="img/modal-favorites-img_mob.jpg">
 		</picture>
-		<form action="" class="modal__form modal__form--like-login modal__form--page" method="post" name="login-form">
+		<form action="" class="modal__form modal__form--favorites-login modal__form--page" method="post" name="login-form">
 			<h3 class="modal__title">Вход</h3>
 			<label class="modal__label">
 				<input class="modal__input modal__input--page" type="email" id="email" name="login" placeholder="Email" required>
@@ -164,7 +164,7 @@
 			<div class="footer__item footer__item--logo">
 				<div class="logo"><a class="logo__link">A<span>tep</span></a></div>
 			</div>
-			<div class="footer__item footer__item--slogan">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</div>
+			<div class="footer__item footer__item--slogan">On the other hand, we denounce with righteous indignation and disfavorites men who are so beguiled and demoralized by the charms.</div>
 			<div class="footer__item">
 				<form class="footer__form" method="post" action="#" id="form-follow" name="form-follow">
 					<label class="footer__form-label">Follow us
