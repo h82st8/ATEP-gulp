@@ -1,0 +1,51 @@
+.cathalog-list {
+    padding: 0;
+    @include flex(row, space-evenly);
+    flex-wrap: wrap;
+
+    .cathalog-item {
+        list-style: none;
+        margin: 30px; /* блокам нельзя задавать расположение */
+        position: relative;
+
+        // .cathalog-item__link {
+        //     position: relative;
+        //     display: block;
+        //     // height: 100%;
+            
+        // }
+
+        .cathalog-item__link-button {
+            width: 218px;
+            height: 47px;
+            @include flex(row, center);
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 15%;
+            @include font($accent-font-family, 17px, normal, 25px, $main-text-color, rgba(255, 255, 255, 0.81));
+            text-decoration: none;
+        }
+
+        .cathalog-item__title {
+            @include font($accent-font-family, 17px, normal, 25px, $main-text-color, none);
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        .cathalog-item__price {
+            @include font($accent-font-family, 17px, normal, 25px, $active-text-color, none);
+            margin: 0;
+        }
+
+        .cathalog-item__link-feedback {
+            @include font($accent-font-family, 14px, normal, 21px, $main-text-color, none);
+            text-decoration: none;
+        }
+    }
+
+    .cathalog-item:hover {
+        background-color: rgba(249, 212, 201, 0.62);
+        z-index: 10;
+    }
+}
