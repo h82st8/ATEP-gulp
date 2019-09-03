@@ -55,6 +55,7 @@ for (let i = 0; i < linkLogin.length; i++) {
 	popupWrapper.classList.add('modal--show');
 	popupLogin.classList.add('modal--show');
 	popupLogin.setAttribute('tabindex', '0');
+	focusRestrict();
 	popupLogin.focus();
 	focusRestrict();
 	});

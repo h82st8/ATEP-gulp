@@ -14,7 +14,8 @@ const gulp         = require('gulp'),
 			responsive   = require('gulp-responsive'),
 			webp         = require('gulp-webp'),
 			newer        = require('gulp-newer'),
-			bwsync       = require('browser-sync').create();
+			bwsync       = require('browser-sync').create(),
+			pug			 = require('gulp-pug');
 
 const path = {
 						build: {
@@ -147,6 +148,14 @@ gulp.task('imgx1', function() {
 		}))
 		.pipe(webp({quality: 70}))
 		.pipe(gulp.dest(path.build.img));
+});
+
+gulp.task('pug', function () {
+	return gulp.src('src/pug/pages/*.pug')
+		.pipe(pug({
+			pretty:true
+		}))
+		.pipe(gulp.dest(path.build.html))
 });
 
 gulp.task('watch', function() {

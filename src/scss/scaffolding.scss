@@ -65,6 +65,7 @@ body {
 .accessible:focus {
 	top        : 15px;
 	left       : 0;
+	z-index: 2;
 
 	overflow   : auto;
 
