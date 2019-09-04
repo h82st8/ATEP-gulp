@@ -1851,7 +1851,8 @@ body {
       font-weight: normal;
       line-height: 31px;
       color: #ff0000;
-      background: none; }
+      background: none;
+      /*change only color*/ }
 
 .cathalog-list {
   padding: 0;

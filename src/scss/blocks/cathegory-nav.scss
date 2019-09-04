@@ -20,7 +20,7 @@
         }
 
         .cathegory-nav__link_active {
-            @include font($accent-font-family, 21px, normal, 31px, $active-text-color, none);
+            @include font($accent-font-family, 21px, normal, 31px, $active-text-color, none);/*change only color*/
         }
     }
 }
