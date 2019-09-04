@@ -1582,13 +1582,13 @@ body {
   -webkit-transform: translateX(105%);
       -ms-transform: translateX(105%);
           transform: translateX(105%);
-  background: rgba(255, 255, 255, 0.93); }
+  background: rgba(255, 255, 255, 0.93);
+  /*add animation*/ }
   .modal-right.modal--show {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
-  .modal-right.modal--animation {
+    display: flex;
     -webkit-transition: -webkit-transform .7s linear;
     transition: -webkit-transform .7s linear;
     -o-transition: transform .7s linear;
@@ -1596,7 +1596,25 @@ body {
     transition: transform .7s linear, -webkit-transform .7s linear;
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
-            transform: translateX(0%); }
+            transform: translateX(0%);
+    -webkit-animation: bob 0.7s;
+            animation: bob 0.7s; }
+
+@-webkit-keyframes bob {
+  0% {
+    -webkit-transform: translateX(105%);
+            transform: translateX(105%); }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
+
+@keyframes bob {
+  0% {
+    -webkit-transform: translateX(105%);
+            transform: translateX(105%); }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); } }
 
 .modal-right__title {
   margin: 0 0 42px;
@@ -1837,6 +1855,7 @@ body {
   .cathegory-nav__content .cathegory-nav__item {
     list-style: none; }
     .cathegory-nav__content .cathegory-nav__item .cathegory-nav__link {
+      position: relative;
       font-family: "Poppins", "Arial", sans-serif;
       font-size: 21px;
       font-weight: normal;
@@ -1932,7 +1951,24 @@ body {
       color: #000000;
       background: none;
       text-decoration: none;
-      margin-left: 10px; }
+      margin-left: 10px;
+      position: relative; }
+      .cathalog-list .cathalog-item .cathalog-item__link-feedback::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        -webkit-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+        background: #000000; }
+      .cathalog-list .cathalog-item .cathalog-item__link-feedback:hover {
+        font-weight: 700; }
+        .cathalog-list .cathalog-item .cathalog-item__link-feedback:hover::before {
+          width: 100%; }
     .cathalog-list .cathalog-item:hover {
       -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16);
               box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16); }

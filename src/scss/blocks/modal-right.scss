@@ -15,12 +15,20 @@
 
 	&.modal--show {
 		display       : flex;
-	}
-
-	&.modal--animation {
 		transition : transform .7s linear;
 		transform  : translateX(0%);
+		animation: bob 0.7s;
 	}
+	/*add animation*/
+	@keyframes bob {
+		0% {transform  : translateX(105%);}
+		100% {transform  : translateX(0%);}
+	}
+
+	// &.modal--animation {
+	// 	transition : transform .7s linear;
+	// 	transform  : translateX(0%);
+	// }
 }
 
 .modal-right__title {
