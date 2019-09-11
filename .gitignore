@@ -3,7 +3,7 @@
 *.log
 *.pdf
 *.sublime*
-.idea/
+
 node_modules/
 debug.log
 npm-debag.*
