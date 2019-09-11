@@ -15,51 +15,56 @@ $logo-font-family   : "Baskerville Old Face", serif;
 
 
 // color
-$main-text-color        : #000000;
-$main-color-background  : #ffffff;
-$second-background      : #ffe9e2;
-$main-slider-background : #000000;
-$active-text-color      : #ff0000;
-$input-text-color       : #c7c7c7;
-$modal-text-color       : #ffffff;
-$modal-page-text-color  : #000000;
-$modal-text-second-color: #000000;
-$second-modal-background: #ffe9e2;
-$border-form-color      : #d1d1d1;
+$main-text-color         : #000000;
+$main-background         : #ffffff;
+$second-background       : #ffe9e2;
+$accent-background       : #000000;
+$main-slider-background  : #000000;
+$active-text-color       : #ff0000;
+$input-text-color        : #c7c7c7;
+$modal-text-color        : #ffffff;
+$modal-page-text-color   : #000000;
+$modal-text-second-color : #000000;
+$border-form-color       : #d1d1d1;
+$modal-search-backdgound : #262626;
 
 // another
 $button-shadow: 0 0 5px 3px rgba($main-text-color, 0.3);
 
 //mixins
 @mixin flex($fx-direction, $fx-justify, $fx-display: flex) {
-	display        : $fx-display;
-	flex-direction : $fx-direction;
-	justify-content: $fx-justify;
+	display         : $fx-display;
+	flex-direction  : $fx-direction;
+
+	justify-content : $fx-justify;
 }
 
 @mixin font($f-family, $f-size, $f-weight, $f-height, $f-color, $bg-color) {
-	font-family: $f-family;
-	font-size  : $f-size;
-	font-weight: $f-weight;
-	line-height: $f-height;
-	color      : $f-color;
-	background : $bg-color;
+	font-family : $f-family;
+	font-size   : $f-size;
+	font-weight : $f-weight;
+	line-height : $f-height;
+	color       : $f-color;
+
+	background  : $bg-color;
 }
 
 @mixin reset-indent {
-	padding: 0;
-	margin : 0;
+	margin  : 0;
+	padding : 0;
 }
 
 @mixin size ($weight, $height) {
-	width : $weight;
-	height: $height;
+	width  : $weight;
+	height : $height;
 }
 
 @mixin pseudo($display: block) {
-	content : '';
-	display : $display;
-	position: absolute;
+	position : absolute;
+
+	display  : $display;
+
+	content  : '';
 }
 
 //function
@@ -76,4 +81,7 @@ $z-indexes: (
 	'modal-wrapper'             : 25,
 	'header'                    : 24,
 	'header-after'              : 23,
+	'modal-search__button'      : 1000,
+	'header--show'              : 3,
+	'header__shadow'            : 2,
 );

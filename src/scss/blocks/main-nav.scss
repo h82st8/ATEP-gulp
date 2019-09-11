@@ -1,11 +1,11 @@
-.main-nav>ul {
-	position   : relative;
+.main-nav > ul {
+	position : relative;
 
 	@include flex(row, space-between);
 
-	margin     : 0;
-	padding    : 0;
-	width      : 585+44px;
+	margin   : 0;
+	padding  : 0;
+	width    : 585+44px;
 
 	list-style : none;
 }
@@ -17,7 +17,7 @@
 
 	padding         : 14px 21px;
 
-	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color, $main-color-background);
+	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color, $main-background);
 
 	text-decoration : none;
 
@@ -56,38 +56,11 @@
 
 	flex-grow : 1;
 
-	.main-nav__link {
-		padding-right : 49px;
+	// .main-nav__link {
+	// 	padding-right : 49px;
 
-		text-align    : center;
-
-		&::before,
-		&::after {
-			@include pseudo;
-			right            : 30px;
-			bottom           : 20px;
-
-			@include size(8px, 0.1em);
-
-			transition-delay : .7s;
-			transform        : rotate(45deg);
-
-			background       : $main-text-color;
-		}
-
-		&::after {
-			right     : 25px;
-
-			transform : rotate(-45deg);
-		}
-
-		&:hover::before,
-		&:hover::after {
-			height           : 0.15em;
-
-			transition-delay : .7s;
-		}
-	}
+	// 	text-align    : center;
+	// }
 }
 
 .main-nav__submenu-wrapper {
@@ -154,7 +127,7 @@
 
 	list-style  : none;
 
-	background  : $main-color-background;
+	background  : $main-background;
 
 	&:last-child {
 		margin-right: 0;
@@ -167,7 +140,7 @@
 	margin-bottom  : 1px;
 	padding        : 3px 10px;
 
-	@include font($main-font-family, 0.675em, normal, 1.5, $main-text-color, $main-color-background);
+	@include font($main-font-family, 0.675em, normal, 1.5, $main-text-color, $main-background);
 
 	text-decoration: none;
 	letter-spacing : 1px;
@@ -184,7 +157,7 @@
 	margin-bottom: 7px;
 	padding      : 9px;
 
-	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color, $main-color-background);
+	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color, $main-background);
 
 	&::after {
 		@include pseudo;

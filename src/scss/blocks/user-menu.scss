@@ -7,14 +7,14 @@
 }
 
 .user-menu__item {
-	margin      : 7px;
-	margin-right: 9px;
+	margin       : 7px;
+	margin-right : 9px;
 }
 
 .user-menu__link {
-	display: block;
+	display : block;
 
-	padding: 4px;
+	padding : 4px;
 	@include size(22px, 22px);
 
 	.user-menu__icon {
@@ -24,17 +24,85 @@
 	&:hover .user-menu__icon,
 	&:focus .user-menu__icon,
 	&:not([href]) .user-menu__icon {
-		transition-delay: .3s;
-		transform       : scale(1.15);
+		transition-delay : .3s;
+		transform        : scale(1.15);
 	}
 }
 
 .user-menu__item--favorites {
-	transform: translate(-2px, 1px);
+	transform: translate(-2px, 2px);
+}
+
+.user-menu__item--cart {
+	transform: translateX(-2px);
 }
 
 .user-menu__item--search {
-	transform: translate(2px, 2px);
+	display   : none;
+
+	transform : translate(2px, 2px);
+
+	.link-search {
+		animation: searchon .5s;
+	}
+}
+
+.user-menu__item--search-close {
+	position   : relative;
+
+	display    : none;
+
+	@include size(30px, 30px);
+
+	cursor     : pointer;
+	animation  : searchon .5s;
+
+	border     : none;
+	background : transparent;
+
+	&::before,
+	&::after {
+		@include pseudo;
+		top        : 11px;
+		left       : 1px;
+
+		@include size(29px, 1px);
+
+		transform  : rotate(45deg) translate(2px, 2px);
+
+		background : #000000;
+	}
+
+	&:after {
+		right     : 0;
+
+		transform : rotate(135deg) translate(2px, -2px);;
+	}
+
+	&:hover::before,
+	&:hover::after,
+	&:focus::before,
+	&:focus::after {
+		height: 2px;
+	}
+}
+
+.user-menu--toggle-close {
+	animation: searchoff .5s;
+}
+
+@keyframes searchon {
+	0%   {transform: rotateX(90deg);}
+	100% {transform: rotateX(0deg);}
+}
+
+@keyframes searchoff {
+	0%   {transform: rotateX(0deg);}
+	100% {transform: rotateX(90deg);}
+}
+
+.user-menu--toggle {
+	display: block;
 }
 
 .user-menu__item--cart {

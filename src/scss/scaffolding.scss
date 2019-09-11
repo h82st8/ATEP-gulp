@@ -1,7 +1,7 @@
 body {
 	@include reset-indent;
 
-	@include font($main-font-family, $main-font-size, normal, $main-line-height, $main-text-color, $main-color-background);
+	@include font($main-font-family, $main-font-size, normal, $main-line-height, $main-text-color, $main-background);
 }
 
 *:focus {
@@ -72,6 +72,7 @@ body {
 	@include size (auto, auto);
 
 	text-align : center;
+	z-index    : z('focus');
 }
 
 .logo__link span {
@@ -97,6 +98,39 @@ body {
 	}
 }
 
+.arrow {
+	display: inline-block;
+	position: relative;
+	@include size(7px, 7px);
+
+	&::before,
+	&::after {
+		@include pseudo;
+		left             : 10px;
+		bottom           : 1px;
+
+		@include size(8px, 0.1em);
+
+		transition-delay : .7s;
+		transform        : rotate(45deg);
+
+		background       : $main-text-color;
+	}
+
+	&::after {
+		left     : 15px;
+
+		transform : rotate(-45deg);
+	}
+
+	&:hover::before,
+	&:hover::after {
+		height           : 0.15em;
+
+		transition-delay : .7s;
+	}
+}
+
 .form-button {
 	position        : relative;
 
@@ -104,7 +138,7 @@ body {
 
 	padding         : 18px 0;
 
-	@include font($main-font-family, 1.067em, 500, $main-line-height, $main-text-color, $main-color-background);
+	@include font($main-font-family, 1.067em, 500, $main-line-height, $main-text-color, $main-background);
 
 	transition      : all 300ms ease;
 	text-decoration : none;
@@ -112,12 +146,14 @@ body {
 	border          : 1px solid $main-text-color;
 	border-radius   : 5px;
 
+	cursor        : pointer;
+
 	&:hover {
-		color          : $main-color-background;
+		color          : $modal-text-color;
 
 		letter-spacing : 1.1px;
 
-		background     : $main-text-color;
+		background     : $accent-background;
 		box-shadow     : $button-shadow;
 	}
 
