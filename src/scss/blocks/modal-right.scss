@@ -7,8 +7,8 @@
 
 	@include flex(column, flex-start, none);
 
-	padding    : 133px 30px 30px 60px;
-	@include size(25vw, 100vh);
+	padding    : 133px 60px 30px;
+	@include size(525-60-60px, 100vh);
 
 	transition : transform .7s linear;
 	transform  : translateX(100%);
@@ -146,7 +146,7 @@
 
 	letter-spacing : 0.9px;
 
-	&::last-child {
+	&:last-child {
 		margin-bottom: 2px;
 	}
 }
@@ -211,6 +211,43 @@
 
 		border-radius : 2px;
 	}
+}
+
+.modal-right__title--cart {
+	margin: 4px 0 23px;
+}
+
+.modal-right--cart {
+	.modal-right__text:first-of-type {
+		margin: auto 0 0;
+	}
+	.modal-right__text:last-child {
+		margin: 0;
+	}
+}
+
+.modal-right__amount-payable--toggle {
+	display: none;
+}
+
+.modal-right__amount-payable {
+	@include font($accent-font-family, 1.2em, normal, 1.33, $main-text-color, transparent);
+	margin: 15px 0;
+}
+
+.modal-right__button-cart {
+	width      : 348px;
+	padding    : 17px;
+	text-align : center;
+	border     : none;
+	margin     : 0 auto 10px;
+	@include font($accent-font-family, 1.2em, normal, 1.50, $main-text-color, $main-background);
+	box-shadow : 1px 1px 1px #dddddd;
+	box-sizing : border-box;
+}
+
+.modal-right__button-cart:first-of-type {
+	margin-top: 34px;
 }
 
 .modal-right--page {

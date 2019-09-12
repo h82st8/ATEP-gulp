@@ -1694,8 +1694,9 @@ body {
     width: 207px;
     height: 273px;
     border-radius: 10px; }
-  .modal--favorites-login .modal__form--favorites-login {
-    width: 344px; }
+
+.modal__form--favorites-login {
+  width: 344px; }
 
 .modal--show {
   display: -webkit-box;
@@ -1761,8 +1762,8 @@ body {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 133px 30px 30px 60px;
-  width: 25vw;
+  padding: 133px 60px 30px;
+  width: 405px;
   height: 100vh;
   -webkit-transition: -webkit-transform .7s linear;
   transition: -webkit-transform .7s linear;
@@ -1950,7 +1951,7 @@ body {
   color: #000000;
   background: transparent;
   letter-spacing: 0.9px; }
-  .modal-right__text::last-child {
+  .modal-right__text:last-child {
     margin-bottom: 2px; }
 
 .modal-right__button {
@@ -2009,6 +2010,47 @@ body {
     width: 42px;
     height: 4px;
     border-radius: 2px; }
+
+.modal-right__title--cart {
+  margin: 4px 0 23px; }
+
+.modal-right--cart .modal-right__text:first-of-type {
+  margin: auto 0 0; }
+
+.modal-right--cart .modal-right__text:last-child {
+  margin: 0; }
+
+.modal-right__amount-payable--toggle {
+  display: none; }
+
+.modal-right__amount-payable {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.33;
+  color: #000000;
+  background: transparent;
+  margin: 15px 0; }
+
+.modal-right__button-cart {
+  width: 348px;
+  padding: 17px;
+  text-align: center;
+  border: none;
+  margin: 0 auto 10px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000000;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 1px 1px #dddddd;
+          box-shadow: 1px 1px 1px #dddddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.modal-right__button-cart:first-of-type {
+  margin-top: 34px; }
 
 .modal-right--page {
   position: relative;
