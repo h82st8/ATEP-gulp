@@ -117,7 +117,7 @@
 						<use xlink:href="img/sprite.svg#icon-user"></use>
 					</svg>
 				</a></li>
-				<li class="user-menu__item user-menu__item--search"><a href="search.html" class="user-menu__link"><span class="visually-hidden">Поиск</span>
+				<li class="user-menu__item user-menu__item--search"><a href="#" class="user-menu__link"><span class="visually-hidden">Поиск</span>
 					<svg class="user-menu__icon" width="20" height="20">
 						<use xlink:href="img/sprite.svg#icon-search"></use>
 					</svg>
@@ -125,58 +125,13 @@
 			</ul>
 		</div>
 	</header>
-	<section class="modal-right modal-right--favorites modal-right--page">
-		<h3 class="modal-right__title modal-right__title--page">Избранное</h3>
-		<div class="modal-right__item modal-right__item--page">
-			<picture class="modal-right__photo">
-				<source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
-				<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
-				<source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
-				<source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
-				<source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg">
-				<img class="image" src="img/modal-favorites-img_2_mob.jpg">
-			</picture>
-			<div class="modal-right__content">
-				<button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
-				<button class="modal-right__add-cart">Добавить в корзину</button>
-				<p class="modal-right__text">Boys light blue jacket</p>
-				<p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
-			</div>
-		</div>
-		<div class="modal-right__item modal-right__item--page">
-			<picture class="modal-right__photo">
-				<source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
-				<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
-				<source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
-				<source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
-				<source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg">
-				<img class="image" src="img/modal-favorites-img_2_mob.jpg">
-			</picture>
-			<div class="modal-right__content">
-				<button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
-				<button class="modal-right__add-cart">Добавить в корзину</button>
-				<p class="modal-right__text">Boys light blue jacket</p>
-				<p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
-			</div>
-		</div>
-		<div class="modal-right__item modal-right__item--page">
-			<picture class="modal-right__photo">
-				<source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
-				<source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
-				<source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
-				<source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
-				<source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg">
-				<img class="image" src="img/modal-favorites-img_2_mob.jpg">
-			</picture>
-			<div class="modal-right__content">
-				<button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
-				<button class="modal-right__add-cart">Добавить в корзину</button>
-				<p class="modal-right__text">Boys light blue jacket</p>
-				<p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
-			</div>
-		</div>
-		<a href="#" class="modal-right__button modal-right__button--page form-button">LookBook</a>
-		<button class="modal-right__close modal-right__close--page"><span class="visually-hidden">Выйти из избранного</span></button>
+	<section class="modal-search modal-search--page">
+		<form class="modal-search__form" action="" method="post" name="modal-search-form">
+			<h3 class="modal-search__title">Поиск</h3>
+			<label for="form-search-input"></label>
+			<input type="text" class="modal-search__input" id="form-search-input" name="form-search-input" onkeyup="checkSearchForm();" minlength="3" placeholder="поиск">
+			<input type="submit" class="modal-search__button" value="Искать">
+		</form>
 	</section>
 	<footer class="footer">
 		<div class="footer__wrapper">
