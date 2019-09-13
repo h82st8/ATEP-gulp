@@ -2452,3 +2452,50 @@ body {
     color: #ffffff; }
   .cathalog__breadcrumbs span {
     margin-bottom: 10px; }
+
+.about-us {
+  padding-top: 67px;
+  padding-bottom: 87px; }
+  .about-us .about-us__preview {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 55px; }
+    .about-us .about-us__preview .about-us__img {
+      margin-right: 110px; }
+    .about-us .about-us__preview .about-us_text {
+      font-family: "Segoe UI", "Arial", sans-serif;
+      font-size: 23px;
+      font-weight: normal;
+      line-height: 31px;
+      color: #000000;
+      background: none;
+      text-align: center; }
+      .about-us .about-us__preview .about-us_text .about-us__title {
+        font-size: 43px;
+        line-height: 57px;
+        font-weight: normal; }
+  .about-us .about-us__gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
