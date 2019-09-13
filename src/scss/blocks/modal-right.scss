@@ -1,34 +1,40 @@
 .modal-right {
 	position   : fixed;
+	display    : none;
 	top        : 0;
 	right      : 0;
+	z-index    : z('modal');
 
 	@include flex(column, flex-start, none);
 
-	padding    : 133px 30px 30px 60px;
-	@include size(25vw, 100vh);
+	padding    : 133px 60px 30px;
+	@include size(525-60-60px, 100vh);
 
 	transition : transform .7s linear;
-	transform  : translateX(105%);
+	transform  : translateX(100%);
 
 	background : hsla(0, 0%, 100%, .93);
 
 	&.modal--show {
-		display       : flex;
-		transition : transform .7s linear;
-		transform  : translateX(0%);
-		animation: bob 0.7s;
-	}
-	/*add animation*/
-	@keyframes bob {
-		0% {transform  : translateX(105%);}
-		100% {transform  : translateX(0%);}
+		display   : flex;
+		animation : rightOpen .7s linear;
+		transform : translateX(0%);
 	}
 
-	// &.modal--animation {
-	// 	transition : transform .7s linear;
-	// 	transform  : translateX(0%);
-	// }
+	&.modal--close {
+		display   : flex;
+		animation : rightclose .7s linear;
+	}
+}
+
+@keyframes rightOpen {
+	0%   {transform  : translateX(100%);}
+	100% {transform  : translateX(0%);}
+}
+
+@keyframes rightClose {
+	0%   {transform  : translateX(0%);}
+	100% {transform  : translateX(100%);}
 }
 
 .modal-right__title {
@@ -83,7 +89,7 @@
 
 		transform  : rotate(45deg);
 
-		background : $main-text-color;
+		background : $accent-background;
 	}
 
 	&::after {
@@ -115,13 +121,13 @@
 	box-sizing     : border-box;
 	width          : 120px;
 
-	@include font($accent-font-family, 0.533em, 300, 1.5, $main-color-background, $main-text-color);
+	@include font($accent-font-family, 0.533em, 300, 1.5, $main-background, $accent-background);
 
 	cursor         : pointer;
 	text-align     : center;
 	letter-spacing : 0.9px;
 
-	border         : 1px solid $main-text-color;
+	border         : 1px solid $accent-background;
 
 	align-self     : flex-start;
 
@@ -140,7 +146,7 @@
 
 	letter-spacing : 0.9px;
 
-	&::last-child {
+	&:last-child {
 		margin-bottom: 2px;
 	}
 }
@@ -150,7 +156,7 @@
 	padding        : 7px;
 	width          : 171px;
 
-	@include font($accent-font-family, 1em, normal, 1.5, $main-color-background, $main-text-color);
+	@include font($accent-font-family, 1em, normal, 1.5, $modal-text-color, $accent-background);
 
 	text-align     : center;
 	text-transform : uppercase;
@@ -179,11 +185,11 @@
 		margin-top    : 18px;
 		@include size(40px, 2px);
 
+		transition    : .3;
 		transform     : rotate(115deg);
 
-		background    : #333333;
-		transition    : .3;
 		border-radius : 2px;
+		background    : #333333;
 	}
 
 	&::after {
@@ -194,6 +200,7 @@
 
 	&:hover {
 		left       : -1px;
+
 		background : hsla(0, 0%, 60%, .15);
 		box-shadow : 0 0 2px hsla(0, 0%, 60%, .15);
 	}
@@ -204,6 +211,43 @@
 
 		border-radius : 2px;
 	}
+}
+
+.modal-right__title--cart {
+	margin: 4px 0 23px;
+}
+
+.modal-right--cart {
+	.modal-right__text:first-of-type {
+		margin: auto 0 0;
+	}
+	.modal-right__text:last-child {
+		margin: 0;
+	}
+}
+
+.modal-right__amount-payable--toggle {
+	display: none;
+}
+
+.modal-right__amount-payable {
+	@include font($accent-font-family, 1.2em, normal, 1.33, $main-text-color, transparent);
+	margin: 15px 0;
+}
+
+.modal-right__button-cart {
+	width      : 348px;
+	padding    : 17px;
+	text-align : center;
+	border     : none;
+	margin     : 0 auto 10px;
+	@include font($accent-font-family, 1.2em, normal, 1.50, $main-text-color, $main-background);
+	box-shadow : 1px 1px 1px #dddddd;
+	box-sizing : border-box;
+}
+
+.modal-right__button-cart:first-of-type {
+	margin-top: 34px;
 }
 
 .modal-right--page {

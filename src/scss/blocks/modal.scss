@@ -2,6 +2,7 @@
 	position      : fixed;
 	top           : 50vh;
 	left          : 50vw;
+	z-index       : z('modal');
 
 	display       : none;
 
@@ -13,7 +14,6 @@
 
 	border-radius : 25px;
 	background    : hsla(0, 0%, 100%, .65);
-	z-index       : z('modal');
 }
 
 .modal__form {
@@ -67,18 +67,18 @@
 	box-sizing    : border-box;
 	width         : 344px;
 
-	@include font(Baskerville Old Face, 1.333em, normal, 1, $main-text-color, $modal-text-color);
+	@include font(Baskerville Old Face, 1.333em, normal, 1, $main-text-color, $main-background);
 
 	border        : none;
 	border-radius : 5px;
-	background    : $modal-text-color;
 
 	&::placeholder {
 		color: $input-text-color;
 	}
 
-	&:valid {
-		box-shadow: inset 0 0 1px 1px #1fdf3f;
+	&:invalid {
+		background: $main-background;
+		box-shadow: inset 0 0 0 2px #de3020;
 	}
 }
 
@@ -169,8 +169,8 @@
 }
 
 .modal__button--login {
-	margin-bottom: 4px;
-	width        : 100%;
+	margin-bottom : 4px;
+	width         : 100%;
 }
 
 .modal__link {
@@ -222,10 +222,10 @@
 
 		border-radius: 10px;
 	}
+}
 
-	.modal__form--favorites-login {
-		width: 344px;
-	}
+.modal__form--favorites-login {
+	width: 344px;
 }
 
 .modal--show {
@@ -236,6 +236,7 @@
 	position      : relative;
 	top           : 0;
 	left          : 0;
+	z-index       : 0;
 
 	display       : flex;
 
@@ -246,7 +247,6 @@
 
 	border-top    : 1px solid $main-text-color;
 	border-radius : 0;
-	z-index       : 0;
 }
 
 .modal__title--page {
@@ -271,7 +271,7 @@
 	color       : $main-text-color;
 
 	border-color: $main-text-color;
-	background  : $main-color-background;
+	background  : $main-background;
 
 	&.modal__button--recovery {
 		margin-top: 20px;
@@ -279,7 +279,7 @@
 
 	&:hover,
 	&:focus {
-		color       : $main-color-background;
+		color       : $main-background;
 
 		border-color: $main-text-color;
 		background  : $main-text-color;
