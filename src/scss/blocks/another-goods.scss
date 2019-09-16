@@ -1,3 +1,7 @@
+.another-goods {
+    margin-bottom: 83px;
+}
+
 .another-goods__title {
     @include font($accent-font-family, 21px, normal, 31px, #9C9C9C, none);
     margin-bottom: 71px;
@@ -38,8 +42,10 @@
 }
 
 .another-goods__button {
+    display: block;
     width: 270px;
     height: 57px;
+    margin: 0 auto;
 
     border: 1px solid #000000;
     box-sizing: border-box;

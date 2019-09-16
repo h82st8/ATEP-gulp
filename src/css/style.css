@@ -2500,6 +2500,9 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between; }
 
+.another-goods {
+  margin-bottom: 83px; }
+
 .another-goods__title {
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 21px;
@@ -2569,8 +2572,10 @@ body {
   display: block; }
 
 .another-goods__button {
+  display: block;
   width: 270px;
   height: 57px;
+  margin: 0 auto;
   border: 1px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2582,3 +2587,76 @@ body {
   color: #000000;
   background: none;
   text-align: center; }
+
+.blog-main {
+  padding-top: 143px;
+  padding-bottom: 70px; }
+  .blog-main .blog-main__title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 43px;
+    font-weight: normal;
+    line-height: 57px;
+    color: #000000;
+    background: none;
+    text-transform: uppercase;
+    text-align: center; }
+  .blog-main .blog-main__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    padding-left: 0; }
+    .blog-main .blog-main__list .blog-main__item {
+      width: 381px;
+      height: 481px;
+      list-style: none;
+      border: 1px solid #CDCDCD; }
+      .blog-main .blog-main__list .blog-main__item:nth-child(2n) {
+        margin-top: 60px; }
+
+.blog-main__item-link {
+  position: relative;
+  text-decoration: none;
+  color: #000000; }
+  .blog-main__item-link .white-rectangle {
+    position: absolute;
+    left: 11px;
+    margin-top: 11px;
+    padding: 7px;
+    width: 53px;
+    height: 55px;
+    background-color: #fff; }
+    .blog-main__item-link .white-rectangle .blog-main__datetime {
+      display: block;
+      height: 38px;
+      border: 0.5px solid #B3B3B3;
+      padding: 8px;
+      margin: 0;
+      text-align: center; }
+  .blog-main__item-link .blog-main__short-description {
+    margin: 19px 71px 25px 71px;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #000000;
+    background: none;
+    text-align: center;
+    letter-spacing: 1.1px; }
