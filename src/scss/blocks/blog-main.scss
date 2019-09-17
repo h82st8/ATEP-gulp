@@ -5,9 +5,6 @@
     .blog-main__title {
         margin-bottom: 20px;
         margin-top: 0;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         @include font($main-font-family, 43px, normal, 57px, $main-text-color, none);
         text-transform: uppercase;
         text-align: center;
@@ -15,7 +12,6 @@
 
     .blog-main__list {
         @include flex(row, space-between);
-        position: relative;
         padding-left: 0;
 
         .blog-main__item {
@@ -24,8 +20,8 @@
             list-style: none;
             border: 1px solid #CDCDCD;
 
-            &:nth-child(2n) {
-                margin-top: 60px;
+            &:nth-child(2n+1) {
+                transform: translateY(-71px);
             }
         }
 

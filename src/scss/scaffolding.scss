@@ -183,7 +183,9 @@ body {
 }
 
 .main-slider {
-	@include size(100%, 768px);
+	@include size(100%, 695px);
+	@include flex(row, center);
+    align-items: center;
 
 	background: $main-slider-background;
 }

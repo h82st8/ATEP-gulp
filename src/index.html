@@ -182,17 +182,38 @@
 		<div class="header__shadow"></div>
 	</header>
 	<!-- <section class="main-slider" id="main-content"></section> -->
-	<section class="main-slider">
-		<!-- collections-main -->
-		<div class="collections-main__block-1">
-			<!-- change div with background to img -->
-			<div class="collections-main__description">
-				<p>Летняя коллекция<br>2019</p>
-				<span>Элегантная и Стильная Одежда<br>для Летнего Сезона</span><br>
-				<button>Купить сейчас!</button>
+	<div class="main-slider">
+		<section class="stock-slider stock-slider__header">
+			<!-- collections-main -->
+			<div class="collections-main_block-1">
+				<picture class="another-goods__img">
+					<source type="image/webp" media="(min-width: 1440px)"
+						srcset="img/wx1/image2.5_desk.webp 1x, img/wx2/image2.5_desk.webp 2x, img/wx3/image2.5_desk.webp 3x">
+					<source type="image/webp" media="(min-width: 768px)"
+						srcset="img/wx1/image2.5_tab.webp 1x, img/wx2/image2.5_tab.webp 2x, img/wx3/image2.5_tab.webp 3x">
+					<source type="image/webp"
+						srcset="img/wx1/image2.5_mob.webp 1x, img/wx2/image2.5_mob.webp 2x, img/wx3/image2.5_mob.webp 3x">
+					<source media="(min-width: 1440px)" srcset="img/image2.5_desk.jpg">
+					<source media="(min-width: 768px)" srcset="img/image2.5_tab.jpg">
+					<img src="img/image2.5_mob.jpg" alt="Интерьер" title="Интерьер">
+				</picture>
+
+				<div class="collections-main__description">
+					<h2 class="collections-main__description-title">Летняя коллекция<br>2019</h2>
+					<p class="collections-main__description-slogan">Элегантная и Стильная Одежда<br>для Летнего Сезона</p><br>
+					<button class="collections-main__button">Купить сейчас!</button>
+				</div>
+				
+
+				<a href="#" class="stock-slider__switcher">
+					<svg class="right-arrow" width="24" height="40" viewBox="0 0 24 40" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 37.5L20 20L2 2.5" stroke="black" stroke-width="4.5" />
+					</svg>
+				</a>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 
 	<div class="main-wrapper">
 		<section class="about-us">
@@ -429,17 +450,8 @@
 		</section>
 	</div>
 
-	<!-- <section class="stock-main">
-			<div class="stock-main_img-1">
-				<div class="stock-main_text">
-					<p>Proin varius, libero at molestie lobortis</p>
-				</div>
-			</div> -->
-	<!-- <div class="stock_img-2"></div> -->
-	<!-- </section> -->
-
 	<!-- Also slider like a top  -->
-	<section class="main-slider">
+	<section class="stock-slider">
 		<!-- collections-main -->
 		<div class="collections-main_block-1">
 			<picture class="another-goods__img">
@@ -454,9 +466,16 @@
 				<img src="img/BLOCK-3_mob.jpg" alt="Интерьер" title="Интерьер">
 			</picture>
 			<!-- change div with background to img -->
-			<div class="stock-main_text">
-				<p>Proin varius, libero at molestie lobortis</p>
+			<div class="stock-main__text-block">
+				<p class="stock-main__text">Proin varius, libero at molestie lobortis</p>
 			</div>
+
+			<a href="#" class="stock-slider__switcher">
+				<svg class="right-arrow" width="24" height="40" viewBox="0 0 24 40" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 37.5L20 20L2 2.5" stroke="black" stroke-width="4.5" />
+				</svg>
+			</a>
 		</div>
 	</section>
 
