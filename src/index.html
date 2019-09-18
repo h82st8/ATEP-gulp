@@ -183,7 +183,7 @@
 	</header>
 	<!-- <section class="main-slider" id="main-content"></section> -->
 	<div class="main-slider">
-		<section class="stock-slider stock-slider__header">
+		<section class="stock-slider__header">
 			<!-- collections-main -->
 			<div class="collections-main_block-1">
 				<picture class="another-goods__img">
@@ -197,6 +197,17 @@
 					<source media="(min-width: 768px)" srcset="img/image2.5_tab.jpg">
 					<img src="img/image2.5_mob.jpg" alt="Интерьер" title="Интерьер">
 				</picture>
+				<picture class="another-goods__img">
+						<source type="image/webp" media="(min-width: 1440px)"
+							srcset="img/wx1/image6_desk.webp 1x, img/wx2/image6_desk.webp 2x, img/wx3/image6_desk.webp 3x">
+						<source type="image/webp" media="(min-width: 768px)"
+							srcset="img/wx1/image6_tab.webp 1x, img/wx2/image6_tab.webp 2x, img/wx3/image6_tab.webp 3x">
+						<source type="image/webp"
+							srcset="img/wx1/image6_mob.webp 1x, img/wx2/image6_mob.webp 2x, img/wx3/image6_mob.webp 3x">
+						<source media="(min-width: 1440px)" srcset="img/image6_desk.jpg">
+						<source media="(min-width: 768px)" srcset="img/image6_tab.jpg">
+						<img src="img/image6_mob.jpg" alt="Интерьер" title="Интерьер">
+					</picture>
 
 				<div class="collections-main__description">
 					<h2 class="collections-main__description-title">Летняя коллекция<br>2019</h2>
@@ -205,12 +216,8 @@
 				</div>
 				
 
-				<a href="#" class="stock-slider__switcher">
-					<svg class="right-arrow" width="24" height="40" viewBox="0 0 24 40" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M2 37.5L20 20L2 2.5" stroke="black" stroke-width="4.5" />
-					</svg>
-				</a>
+				<button class="stock-slider__prev"></button>
+				<button class="stock-slider__next"></button>
 			</div>
 		</section>
 	</div>
@@ -280,6 +287,7 @@
 			<h3 class="another-goods__title">ДРУГИЕ ТОВАРЫ</h3>
 			<div class="another-goods__content-block">
 				<!--products-main_block  products-main-switch-->
+				<!-- кнопки вынести, чтобы они были отдельно как блок управления и переписать их через афтер бифоре -->
 				<svg class="another-goods-switch" width="24" height="40" viewBox="0 0 24 40" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
 					<path d="M22 2.5L4 20L22 37.5" stroke="black" stroke-width="4.5" />
