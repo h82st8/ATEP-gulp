@@ -7,7 +7,7 @@
 }
 
 .user-menu__item {
-	margin       : 7px;
+	margin       : 7px 4px;
 	margin-right : 9px;
 }
 
@@ -15,7 +15,8 @@
 	display : block;
 
 	padding : 4px;
-	@include size(22px, 22px);
+	@include size(25px, 25px);
+	cursor  : pointer;
 
 	.user-menu__icon {
 		transition: all 0.3s ease;
@@ -29,18 +30,8 @@
 	}
 }
 
-.user-menu__item--favorites {
-	transform: translate(-2px, 2px);
-}
-
-.user-menu__item--cart {
-	transform: translateX(-2px);
-}
-
 .user-menu__item--search {
 	display   : none;
-
-	transform : translate(2px, 2px);
 
 	.link-search {
 		animation: searchon .5s;
@@ -48,17 +39,18 @@
 }
 
 .user-menu__item--search-close {
-	position   : relative;
+	position    : relative;
+	margin-left : 7px;
 
-	display    : none;
+	display     : none;
 
 	@include size(30px, 30px);
 
-	cursor     : pointer;
-	animation  : searchon .5s;
+	cursor      : pointer;
+	animation   : searchon .5s;
 
-	border     : none;
-	background : transparent;
+	border      : none;
+	background  : transparent;
 
 	&::before,
 	&::after {
@@ -112,7 +104,7 @@
 .user-menu__number-purchases {
 	position     : absolute;
 	top          : -2px;
-	right        : -1px;
+	right        : 2px;
 
 	@include flex(row, center);
 

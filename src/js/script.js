@@ -9,7 +9,7 @@ const header               = document.querySelector('.header'),
 			linkLogin            = document.querySelectorAll('.link-login'),
 			popupBody            = document.querySelector('body'),
 			popupWrapper         = document.querySelector('.modal-wrapper'),
-			popupLogin           = document.querySelector('.modal--login'),
+			popupLogin           = document.querySelector('.modal'),
 			linkRecovery         = popupLogin.querySelector('.link-recovery'),
 			popupRecovery        = document.querySelector('.modal--recovery'),
 			linkFavorites        = document.querySelector('.link-favorites'),
@@ -38,8 +38,8 @@ function headerSticky() {
 	let changeYMyself = window.pageYOffset;
 	if(window.pageYOffset < 250 && header.classList.contains('trigger')) {
 		header.classList.add('header--close');
-		setTimeout(function(){header.classList.remove('header--close')}, 701);
-		setTimeout(function(){header.classList.remove('trigger')}, 510);
+		setTimeout(function(){header.classList.remove('header--close')}, 690);
+		setTimeout(function(){header.classList.remove('trigger')}, 300);
 	}
 	if(window.pageYOffset >= 250) {
 			header.classList.add('header--show');
