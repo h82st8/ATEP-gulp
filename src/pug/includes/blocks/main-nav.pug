@@ -1,6 +1,11 @@
 include ../mixins.pug
 
 nav.header__item.main-nav
+	.main-nav__buttons.main-nav__toggle
+		button.main-nav__button-menu
+			span.visually-hidden Меню
+		button.main-nav__button-close
+			span.visually-hidden Закрыть меню
 	ul
 		li.main-nav__item
 			if(indexHtml)
@@ -12,6 +17,7 @@ nav.header__item.main-nav
 					each val in ['Г', 'л', 'а', 'в', 'н', 'а', 'я']
 						span= val
 		li.main-nav__item.main-nav__item--submenu
+			span.main-nav__submenu--mobile.link-her.arrow
 			if(cathalogHtml)
 				a.main-nav__link(aria-label='Для нее')
 					each val in ['Д','л','я',' ','н','е','е']
@@ -21,7 +27,7 @@ nav.header__item.main-nav
 					each val in ['Д','л','я',' ','н','е','е']
 						span= val
 					span.arrow
-			.main-nav__submenu-wrapper
+			.main-nav__submenu-wrapper.main-nav__submenu-wrapper--her
 				.main-nav__submenu
 					+link('accessible main-nav__submenu__accessible', 'Перейти к товарам для него', '#for-him')
 					ul.main-nav__column
@@ -43,6 +49,7 @@ nav.header__item.main-nav
 							li.main-nav__submenu-item
 								+link('main-nav__submenu-link', ''+val)
 		li.main-nav__item.main-nav__item--submenu
+			span.main-nav__submenu--mobile.link-him.arrow
 			if(cathalogHtml)
 				a#for-him.main-nav__link(aria-label='Для него')
 					each val in ['Д','л','я',' ','н','е','г', 'о']
@@ -52,7 +59,7 @@ nav.header__item.main-nav
 					each val in ['Д','л','я',' ','н','е','г', 'о']
 						span= val
 					span.arrow
-			.main-nav__submenu-wrapper
+			.main-nav__submenu-wrapper.main-nav__submenu-wrapper--him
 				.main-nav__submenu
 					+link('accessible main-nav__submenu__accessible', 'Перейти к Lookbook', '#lookbook')
 					ul.main-nav__column
