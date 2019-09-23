@@ -32,4 +32,28 @@
     .stock-slider__switcher {
         right: 30px;
     }
+
+    .stock-slider__next{
+        @include flex(row, center);
+        align-items: center;
+        width: 67px;
+        height: 67px;
+        position: absolute;
+        bottom: 50%;
+        right: 30px;
+        background-color: $main-background;
+        transform: translateY(50%);
+    }
+    
+    .stock-slider__prev{
+        @include flex(row, center);
+        align-items: center;
+        width: 67px;
+        height: 67px;
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        background-color: $main-background;
+        transform: translateY(50%);
+    }
 }
