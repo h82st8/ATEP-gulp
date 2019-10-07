@@ -17,22 +17,78 @@ body {
 }
 
 .main-wrapper {
-	margin : 0 auto;
-	width  : $main-unit;
+	padding: 0 5.8%;
 }
 
 .logo__link {
 	display         : block;
 
-	padding         : 8.5px 25px;
+	padding         : 8px 8px 4px;
 
-	@include font(Baskerville Old Face, 2.267em, 500, 1, #000000, transparent);
+	@include font(Baskerville Old Face, 2em, normal, 1, #000000, transparent);
 
-	transform       : scaleX(1.04);
 	text-decoration : none;
 	letter-spacing  : 0.7px;
 	text-transform  : uppercase;
 }
+
+.logo__link span {
+	color: #ff0000;
+}
+
+.logo {
+	position   : relative;
+
+	&::after {
+		@include pseudo;
+		bottom        : 12.5px;
+		left          : 84px;
+
+		@include size (6px, 6px);
+
+		border-radius : 50%;
+		background    : #ff0000;
+	}
+
+	span {
+		margin-left: -1px;
+	}
+}
+
+@media (min-width: $desktop) {
+
+	.main-wrapper {
+		margin : 0 auto;
+		padding: 0;
+		width  : $main-unit;
+	}
+
+	.logo__link {
+		padding     : 8.5px 25px;
+
+		font-size   : 2.267em;
+		font-weight : 500;
+
+		transform   : scaleX(1.04);
+	}
+
+	.logo {
+		position   : relative;
+
+		&::after {
+			bottom        : 14.5px;
+			left          : 111px;
+
+			@include size (8px, 8px);
+		}
+
+		span {
+			margin-left: -1px;
+		}
+	}
+}
+
+
 
 .visually-hidden {
 	position : absolute !important;
@@ -74,29 +130,6 @@ body {
 
 	text-align : center;
 	z-index    : z('focus');
-}
-
-.logo__link span {
-	color: #ff0000;
-}
-
-.logo {
-	position   : relative;
-
-	&::after {
-		@include pseudo;
-		bottom        : 14.5px;
-		left          : 111px;
-
-		@include size (8px, 8px);
-
-		border-radius : 50%;
-		background    : #ff0000;
-	}
-
-	span {
-		margin-left: -1px;
-	}
 }
 
 .arrow {
