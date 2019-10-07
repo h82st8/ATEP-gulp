@@ -9,7 +9,7 @@ const header               = document.querySelector('.header'),
 			linkLogin            = document.querySelectorAll('.link-login'),
 			popupBody            = document.querySelector('body'),
 			popupWrapper         = document.querySelector('.modal-wrapper'),
-			popupLogin           = document.querySelector('.modal--login'),
+			popupLogin           = document.querySelector('.modal'),
 			linkRecovery         = popupLogin.querySelector('.link-recovery'),
 			popupRecovery        = document.querySelector('.modal--recovery'),
 			linkFavorites        = document.querySelector('.link-favorites'),
@@ -20,6 +20,15 @@ const header               = document.querySelector('.header'),
 			popupSearch          = document.querySelector('.modal-search'),
 			searchText           = popupSearch.querySelector('.modal-search__input'),
 			searchButton         = popupSearch.querySelector('.modal-search__button'),
+			linkHer              = document.querySelector('.link-her'),
+			linkHim              = document.querySelector('.link-him'),
+			menuHer              = document.querySelector('.main-nav__submenu-wrapper--her'),
+			menuHim              = document.querySelector('.main-nav__submenu-wrapper--him'),
+			// buttonMenu           = document.querySelector('.main-nav__buttons'),
+			buttonsMenu          = document.querySelector('.main-nav__buttons'),
+			buttonMenu           = document.querySelector('.main-nav__button-menu'),
+			buttonMenuClose      = document.querySelector('.main-nav__button-close'),
+			menuShow             = document.querySelector('.main-nav'),
 			buttonSearchClose    = document.querySelector('.user-menu__item--search-close');
 
 popupBody.classList.remove('no-js');
@@ -34,12 +43,36 @@ function checkSearchForm() {
 	searchButton.disabled = searchText.value ? false : "disabled";
 }
 
+linkHer.addEventListener('click', function(event) {
+	event.preventDefault();
+	if(menuHim.classList.contains('main-nav__submenu--show')) {
+		menuHim.classList.remove('main-nav__submenu--show');
+		menuHer.classList.add('main-nav__submenu--show');
+	} else if(menuHer.classList.contains('main-nav__submenu--show')) {
+		menuHer.classList.remove('main-nav__submenu--show')
+	} else {
+		menuHer.classList.add('main-nav__submenu--show');
+	}
+});
+
+linkHim.addEventListener('click', function(event) {
+	event.preventDefault();
+	if(menuHer.classList.contains('main-nav__submenu--show')) {
+		menuHer.classList.remove('main-nav__submenu--show');
+		menuHim.classList.add('main-nav__submenu--show');
+	} else if(menuHim.classList.contains('main-nav__submenu--show')) {
+		menuHim.classList.remove('main-nav__submenu--show')
+	} else {
+		menuHim.classList.add('main-nav__submenu--show');
+	}
+});
+
 function headerSticky() {
 	let changeYMyself = window.pageYOffset;
 	if(window.pageYOffset < 250 && header.classList.contains('trigger')) {
 		header.classList.add('header--close');
-		setTimeout(function(){header.classList.remove('header--close')}, 701);
-		setTimeout(function(){header.classList.remove('trigger')}, 510);
+		setTimeout(function(){header.classList.remove('header--close')}, 690);
+		setTimeout(function(){header.classList.remove('trigger')}, 300);
 	}
 	if(window.pageYOffset >= 250) {
 			header.classList.add('header--show');
@@ -63,6 +96,25 @@ function modalShow() {
 function modalClose() {
 	lastFocus.focus();
 }
+
+// buttonMenu.addEventListener('click', function() {
+// 	buttonsMenu.classList.toggle('main-nav__toggle');
+// 	if(menuShow.classList.contains('main-nav--show')) {
+// 		menuShow.classList.remove('main-nav--show');
+// 	} else {
+// 		menuShow.classList.add('main-nav--show');
+// 	}
+// });
+
+buttonMenu.addEventListener('click', function() {
+	buttonsMenu.classList.toggle('main-nav__toggle');
+	menuShow.classList.add('main-nav--show');
+});
+
+buttonMenuClose.addEventListener('click', function() {
+	buttonsMenu.classList.toggle('main-nav__toggle');
+	menuShow.classList.remove('main-nav--show');
+});
 
 for (let i = 0; i < linkLogin.length; i++) {
 	let link = linkLogin[i];
@@ -138,7 +190,7 @@ linkSearch.addEventListener('click', function(event) {
 		buttonSearch.classList.remove('user-menu--toggle-close');
 		buttonSearch.classList.remove('user-menu--toggle');
 		buttonSearchClose.classList.add('user-menu--toggle');
-	}, 501);
+	}, 995);
 	popupSearch.setAttribute('tabindex', '0');
 	focusRestrict();
 });
@@ -150,10 +202,10 @@ buttonSearchClose.addEventListener('click', function(event) {
 	setTimeout(function(){buttonSearchClose.classList.remove('user-menu--toggle-close');
 		buttonSearchClose.classList.remove('user-menu--toggle');
 		buttonSearch.classList.add('user-menu--toggle');
-	}, 501);
+	}, 995);
 	setTimeout(function(){popupSearch.classList.remove('modal--close');
 		header.classList.remove('header--top');
-	}, 1001);
+	}, 995);
 	modalClose();
 });
 
@@ -239,10 +291,10 @@ window.addEventListener('keydown', function(event) {
 				setTimeout(function(){buttonSearchClose.classList.remove('user-menu--toggle-close');
 					buttonSearchClose.classList.remove('user-menu--toggle');
 					buttonSearch.classList.add('user-menu--toggle');
-				}, 501);
+				}, 995);
 				setTimeout(function(){popupSearch.classList.remove('modal--close');
 					header.classList.remove('header--top');
-				}, 1001);
+				}, 995);
 				modalClose();
 		}
 	}
