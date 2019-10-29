@@ -76,9 +76,9 @@
 		color: $input-text-color;
 	}
 
-	&:valid {
+	&:invalid {
 		background: $main-background;
-		box-shadow: inset 0 0 0 2px #1DE17A;
+		box-shadow: inset 0 0 0 2px #de3020;
 	}
 }
 
