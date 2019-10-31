@@ -19,6 +19,7 @@ const gulp         = require('gulp'),
 
 const path = {
 						build: {
+							html:	'dev/',
 							css:    'dev/css/',
 							js:     'dev/js/',
 							img:    'dev/img/',
@@ -123,7 +124,7 @@ gulp.task('imgx3', function() {
 gulp.task('imgx2', function() {
 	return gulp.src(path.src.img)
 		.pipe(plumber())
-		.pipe(newer(path.build.img))
+		// .pipe(newer(path.build.img))
 		.pipe(responsive({
 			'*': [{
 				width: '50%',
@@ -138,7 +139,7 @@ gulp.task('imgx2', function() {
 gulp.task('imgx1', function() {
 	return gulp.src(path.src.img)
 		.pipe(plumber())
-		.pipe(newer(path.build.img))
+		// .pipe(newer(path.build.img))
 		.pipe(responsive({
 			'*': [{
 				width: '33.33%',

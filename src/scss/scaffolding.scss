@@ -17,22 +17,79 @@ body {
 }
 
 .main-wrapper {
-	margin : 0 auto;
-	width  : $main-unit;
+	padding: 0 5.8%;
 }
 
 .logo__link {
 	display         : block;
 
-	padding         : 8.5px 25px;
+	padding         : 8px 8px 4px 0;
 
-	@include font(Baskerville Old Face, 2.267em, 500, 1, #000000, transparent);
+	@include font(Baskerville Old Face, 2em, normal, 1, #000000, transparent);
 
-	transform       : scaleX(1.04);
 	text-decoration : none;
 	letter-spacing  : 0.7px;
 	text-transform  : uppercase;
 }
+
+.logo__link span {
+	color: #ff0000;
+}
+
+.logo {
+	position   : relative;
+
+	&::after {
+		@include pseudo;
+
+		left: 75px;
+		bottom: 8px;
+
+		@include size (6px, 6px);
+
+		border-radius : 50%;
+		background    : #ff0000;
+	}
+
+	span {
+		margin-left: -1px;
+	}
+}
+
+@media (min-width: $desktop) {
+
+	.main-wrapper {
+		margin : 0 auto;
+		padding: 0;
+		width  : $main-unit;
+	}
+
+	.logo__link {
+		padding     : 8.5px 25px;
+
+		font-size   : 2.267em;
+		font-weight : 500;
+
+		transform   : scaleX(1.04);
+	}
+
+	.logo {
+		position   : relative;
+
+		&::after {
+			bottom        : 14.5px;
+			left          : 111px;
+
+			@include size (8px, 8px);
+		}
+
+		span {
+			margin-left: -1px;
+		}
+	}
+}
+
+
 
 .visually-hidden {
 	position : absolute !important;
@@ -76,29 +133,6 @@ body {
 	z-index    : z('focus');
 }
 
-.logo__link span {
-	color: #ff0000;
-}
-
-.logo {
-	position   : relative;
-
-	&::after {
-		@include pseudo;
-		bottom        : 14.5px;
-		left          : 111px;
-
-		@include size (8px, 8px);
-
-		border-radius : 50%;
-		background    : #ff0000;
-	}
-
-	span {
-		margin-left: -1px;
-	}
-}
-
 .arrow {
 	display: inline-block;
 	position: relative;
@@ -107,10 +141,10 @@ body {
 	&::before,
 	&::after {
 		@include pseudo;
-		left             : 10px;
+		left             : 14px;
 		bottom           : 1px;
 
-		@include size(8px, 0.1em);
+		@include size(7px, 0.1em);
 
 		transition-delay : .7s;
 		transform        : rotate(45deg);
@@ -119,7 +153,7 @@ body {
 	}
 
 	&::after {
-		left     : 15px;
+		left     : 18px;
 
 		transform : rotate(-45deg);
 	}
@@ -183,9 +217,7 @@ body {
 }
 
 .main-slider {
-	@include size(100%, 695px);
-	@include flex(row, center);
-    align-items: center;
+	@include size(100%, 768px);
 
 	background: $main-slider-background;
 }

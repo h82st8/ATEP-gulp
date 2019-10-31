@@ -1,35 +1,61 @@
+.main-nav {
+	width : 100%;
+
+	order : 3;
+}
+
+.no-js .main-nav > ul {
+	position  : static;
+
+	transform : translateY(0);
+}
+
 .main-nav > ul {
-	position : relative;
+	position       : absolute;
 
-	@include flex(row, space-between);
+	@include flex(column, space-between);
 
-	margin   : 0;
-	padding  : 0;
-	width    : 585+44px;
+	@include reset-indent;
+	padding-bottom : 10px;
+	width          : 100%;
 
-	list-style : none;
+	list-style     : none;
+
+	transition     : .7s;
+	transform      : translate(-5.8%, -110%);
+
+	background     : $main-background;
+}
+
+.main-nav--show > ul {
+	position   : absolute;
+
+	transition : .7s;
+	transform  : translate(-5.8%, 0);
+}
+
+.main-nav__item {
+	text-align : center;
 }
 
 .main-nav__link {
 	position        : relative;
 
-	display         : block;
+	display         : inline-block;
 
-	padding         : 14px 21px;
+	padding         : 6px;
 
-	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color, $main-background);
+	@include font($main-font-family, 1.2em, normal, 1.25, $main-text-color, $main-background);
 
 	text-decoration : none;
 
 	&:not([href])::after {
-		position   : absolute;
-		right      : 21px;
+		@include pseudo;
+		right      : 8px;
 		bottom     : 0;
-		left       : 21px;
+		left       : 8px;
 
 		height     : 1px;
-
-		content    : "";
 
 		background : $main-text-color;
 	}
@@ -49,74 +75,32 @@
 
 		text-shadow : 1px 1px 0px #dddddd;
 	}
+
+	&[href]:active {
+		color : $main-active;
+	}
+
+	.arrow {
+		display : none;
+	}
 }
 
-.main-nav__item--submenu {
-	position  : initial;
-
-	flex-grow : 1;
+.main-nav__button-close {
+	display : none;
 }
 
-.main-nav__submenu-wrapper {
-	position    : absolute;
-	left        : 50%;
-	z-index     : z('main-nav__submenu-wrapper');
-
-	display     : none;
-	visibility  : hidden;
-
-	padding-top : 56px;
-
-	transform   : translateX(-50%);
-
-	opacity     : 0;
-	background  : transparent;
-
-	filter      : drop-shadow(0 0 10px hsla(0, 0%, 0%, .7));
-}
-
-.main-nav__link:hover + .main-nav__submenu-wrapper,
-.main-nav__item:focus-within > .main-nav__submenu-wrapper,
-.main-nav__item:focus + .main-nav__submenu-wrapper,
-.main-nav__submenu-wrapper:hover,
-.main-nav__submenu-wrapper:focus {
-	display    : block;
-	visibility : visible;
-
-	opacity    : 1;
+.main-nav__toggle {
+	display : block;
 }
 
 .main-nav__submenu {
-	position   : relative;
-	z-index    : z('main-nav__submenu');
-
-	@include flex(row, center);
-	overflow   : hidden;
-
-	padding    : 49px 102px 57px;
-
-	background : white;
-
-	clip-path  : polygon(50% 4.7%, 53% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 47% 0%);
-}
-
-.main-nav__backing--right {
-	right : 0;
-	left  : auto;
-
-	&::before {
-		right            : auto;
-		left             : 20px;
-
-		transform        : rotate(45deg) translateY(-50%);
-		transform-origin : top left;
-	}
+	@include flex(column, center);
 }
 
 .main-nav__column {
 	@include flex(column, flex-start);
 
-	margin-right: 23px;
+	margin-right: 5px;
 	padding     : 0;
 
 	list-style  : none;
@@ -124,40 +108,65 @@
 	background  : $main-background;
 
 	&:last-child {
-		margin-right: 0;
+		margin-right : 0;
 	}
 }
 
-.main-nav__submenu-link {
-	display        : block;
+.main-nav__submenu--mobile {
+	position : absolute;
+	right    : 8px;
 
-	margin-bottom  : 1px;
-	padding        : 3px 10px;
+	@include size(40px, 40px);
+
+	&::before,
+	&::after {
+		bottom : 20px;
+	}
+}
+
+.main-nav__submenu-wrapper {
+	overflow : hidden;
+
+	height   : 0;
+}
+
+.main-nav__submenu--show {
+	height : auto;
+}
+
+.main-nav__submenu-link {
+	display         : inline-block;
+
+	padding         : 3px 6px;
 
 	@include font($main-font-family, 0.675em, normal, 1.5, $main-text-color, $main-background);
 
-	text-decoration: none;
-	letter-spacing : 1px;
+	text-decoration : none;
+	letter-spacing  : 1px;
 
 	&:hover,
 	&:focus {
-		color: $active-text-color;
+		color : $active-text-color;
+	}
+
+	&[href]:active {
+		color : $main-active;
 	}
 }
 
 .main-nav__submenu-link--title {
-	position     : relative;
+	position      : relative;
 
-	margin-bottom: 7px;
-	padding      : 9px;
+	margin-bottom : 5px;
+	padding       : 6px;
 
-	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color, $main-background);
+	@include font($accent-font-family, 1em, 500, 1.50, $main-text-color, $main-background);
 
 	&::after {
 		@include pseudo;
-		right     : 10px;
+		right     : 6px;
 		bottom    : 0;
-		left      : 10px;
+		left      : 6px;
 
 		height    : 0.9px;
 
@@ -170,15 +179,211 @@
 	color: $active-text-color;
 
 	&::after {
-		background: $active-text-color;
+		background : $active-text-color;
 	}
 }
 
-.main-nav__submenu__accessible:focus {
-	top  : 15px;
-	left : 15px;
+.main-nav__buttons {
+	position   : absolute;
+	top        : 2px;
+	right      : 5.8%;
+	z-index    : 20;
+
+	height     : 52px;
+
+	background : #ffffff;
 }
 
-.main-nav__link--footer {
-	background: $second-background;
+.main-nav__button-menu,
+.main-nav__button-close {
+	display    : none;
+
+	margin-top : 17px;
+	@include size(20px, 20px);
+
+	cursor     : pointer;
+
+	border     : none;
+	background : transparent;
+}
+
+.main-nav__button-menu::before {
+	@include pseudo;
+	left       : 0;
+
+	@include size(20px, 2px);
+
+	background : #000000 linear-gradient(to right, #ffffff 0%, #ffffff 40%, #000000 40%, #000000) 100%;
+	box-shadow : 0 8px 0 #000000, 0 -8px 0 #000000;
+}
+
+.main-nav__button-close {
+	display : block;
+
+	&::before,
+	&::after {
+		@include pseudo;
+		top        : 27px;
+		left       : -1px;
+
+		@include size(24px, 2px);
+
+		transform  : rotate(45deg);
+
+		background : #000000;
+	}
+
+	&:after {
+		right     : 2px;
+
+		transform : rotate(135deg) ;
+	}
+}
+
+.main-nav__toggle {
+	.main-nav__button-close {
+		display : none;
+	}
+
+	.main-nav__button-menu {
+		display : block;
+	}
+}
+
+@media (min-width: $desktop) {
+
+	.main-nav {
+		position  : static;
+		z-index   : 0;
+
+		width     : auto;
+
+		transform : translateY(0);
+
+		order     : 0;
+	}
+
+	.main-nav > ul {
+		position  : static;
+
+		@include flex(row, space-between);
+
+		padding   : 0;
+		width     : 585+44px;
+
+		transform : none;
+	}
+
+	.main-nav__item:first-child {
+		margin-right : 10px;
+	}
+
+	.main-nav__link {
+		display         : block;
+
+		padding         : 14px 21px;
+
+		font-size: 1.333em;
+
+		&:not([href])::after {
+			right : 21px;
+			left  : 21px;
+		}
+
+		.arrow {
+			display : inline-block;
+		}
+	}
+
+	.main-nav__item--submenu {
+		position  : initial;
+
+		@include flex(row, center);
+
+		flex-grow : 1;
+	}
+
+	.main-nav__submenu-wrapper {
+		position    : absolute;
+		top         : 53px;
+		left        : 50%;
+		z-index     : z('main-nav__submenu-wrapper');
+
+		display     : none;
+		visibility  : hidden;
+
+		padding-top : 56px;
+		height      : auto;
+
+		transform   : translateX(-50%);
+
+		opacity     : 0;
+		background  : transparent;
+
+		filter      : drop-shadow(0 0 10px hsla(0, 0%, 0%, .7));
+	}
+
+	.main-nav__link:hover + .main-nav__submenu-wrapper,
+	.main-nav__item:focus-within > .main-nav__submenu-wrapper,
+	.main-nav__item:focus + .main-nav__submenu-wrapper,
+	.main-nav__submenu-wrapper:hover,
+	.main-nav__submenu-wrapper:focus {
+		display    : block;
+		visibility : visible;
+
+		opacity    : 1;
+	}
+
+	.main-nav__submenu {
+		position   : relative;
+		z-index    : z('main-nav__submenu');
+
+		overflow   : hidden;
+		flex-direction: row;
+
+		padding    : 49px 102px 57px;
+
+		background : #ffffff;
+
+		clip-path  : polygon(50% 4.7%, 53% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 47% 0%);
+	}
+
+	.main-nav__column {
+		margin-right: 23px;
+	}
+
+	.main-nav__submenu--mobile {
+		display : none;
+	}
+
+	.main-nav__submenu-link {
+		display        : block;
+
+		padding        : 3px 10px;
+	}
+
+	.main-nav__submenu-link--title {
+		margin-bottom : 7px;
+		padding       : 9px;
+
+		font-size     : 1.067em;
+
+		&::after {
+			right     : 10px;
+			left      : 10px;
+		}
+	}
+
+	.main-nav__submenu__accessible:focus {
+		top  : 15px;
+		left : 15px;
+	}
+
+	.main-nav__buttons {
+		display : none;
+	}
+
+	.main-nav__link--footer {
+		background : $second-background;
+	}
 }
