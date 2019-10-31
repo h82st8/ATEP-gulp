@@ -216,12 +216,6 @@ body {
 	overflow: hidden;
 }
 
-.main-slider {
-	@include size(100%, 768px);
-
-	background: $main-slider-background;
-}
-
 .modal-login {
 	display: none;
 }

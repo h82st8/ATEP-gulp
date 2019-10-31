@@ -1,41 +1,17 @@
 include ../mixins.pug
 
-article.main-slider
-    section.main-slider__item
-        p.main-slider__content
-            h2.main-slider__title
-			    | Летняя коллекция
+.main-slider
+	section.main-slider__item
+		.main-slider__content
+			h2.main-slider__title
+				| Летняя коллекция
 				br
 				| 2019
 			span.main-slider__text
 				| Элегантная и Стильная Одежда
 				br
 				| для Летнего Сезона
-			a.main-slider__btn(href="#") Купить сейчас!
-        a.control(href='#')
+			+link('main-slider__btn','Купить сейчас!')
+		a.control(href='#')
 			svg.right-arrow(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
 				path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')
-
-		//- section.stock-slider.stock-slider__header
-		//- 	.collections-main_block-1
-		//- 		picture.another-goods__img
-		//- 			source(type='image/webp', media='(min-width: 1440px)', srcset='img/wx1/image2.5_desk.webp 1x, img/wx2/image2.5_desk.webp 2x, img/wx3/image2.5_desk.webp 3x')
-		//- 			source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image2.5_tab.webp 1x, img/wx2/image2.5_tab.webp 2x, img/wx3/image2.5_tab.webp 3x')
-		//- 			source(type='image/webp', srcset='img/wx1/image2.5_mob.webp 1x, img/wx2/image2.5_mob.webp 2x, img/wx3/image2.5_mob.webp 3x')
-		//- 			source(media='(min-width: 1440px)', srcset='img/image2.5_desk.jpg')
-		//- 			source(media='(min-width: 768px)', srcset='img/image2.5_tab.jpg')
-		//- 			img(src='img/image2.5_mob.jpg', alt='Интерьер', title='Интерьер')
-		//- 		.collections-main__description
-		//- 			h2.collections-main__description-title
-		//- 				| Летняя коллекция
-		//- 				br
-		//- 				| 2019
-		//- 			p.collections-main__description-slogan
-		//- 				| Элегантная и Стильная Одежда
-		//- 				br
-		//- 				| для Летнего Сезона
-		//- 			br
-		//- 			button.collections-main__button Купить сейчас!
-		//- 		a.stock-slider__switcher(href='#')
-		//- 			svg.right-arrow(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
-		//- 				path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')

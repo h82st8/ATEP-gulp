@@ -7,219 +7,185 @@ block variables
 block content
 	include includes/blocks/main-slider.pug
 	.main-wrapper
-		section.about-us
-			.about-us__preview
-				picture.about-us__img
-					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image3.1_desk.webp 1x, img/wx2/image3.1_desk.webp 2x, img/wx3/image3.1_desk.webp 3x')
-					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image3.1_tab.webp 1x, img/wx2/image3.1_tab.webp 2x, img/wx3/image3.1_tab.webp 3x')
-					source(type='image/webp', srcset='img/wx1/image3.1_mob.webp 1x, img/wx2/image3.1_mob.webp 2x, img/wx3/image3.1_mob.webp 3x')
-					source(media='(min-width: 1220px)', srcset='img/image3.1_desk.jpg')
-					source(media='(min-width: 768px)', srcset='img/image3.1_tab.jpg')
-					img(src='img/image3.1_mob.jpg', alt='Интерьер', title='Интерьер')
-			.about-us_text
-				h1.about-us__title ABOUT US
-				p
-					| A style is not just about keeping up with the trending fashion or buying expensive clothes. The style is, in fact, a reflection of your own personality and inner mind and it has little to do with appearance. Being well-dressed doesn’t mean we have a style. It means you pay attention to your looks. But if others say they can see your style, it means you have a hallmark.
-			.about-us__gallery
-				picture.about-us__img.about-us__gallery-item
-					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image3.1_desk.webp 1x, img/wx2/image3.1_desk.webp 2x, img/wx3/image3.1_desk.webp 3x')
-					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image3.1_tab.webp 1x, img/wx2/image3.1_tab.webp 2x, img/wx3/image3.1_tab.webp 3x')
-					source(type='image/webp', srcset='img/wx1/image3.1_mob.webp 1x, img/wx2/image3.1_mob.webp 2x, img/wx3/image3.1_mob.webp 3x')
-					source(media='(min-width: 1220px)', srcset='img/image3.1_desk.jpg')
-					source(media='(min-width: 768px)', srcset='img/image3.1_tab.jpg')
-					img(src='img/image3.1_mob.jpg', alt='Интерьер', title='Интерьер')
-				picture.about-us__img.about-us__gallery-item
-					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image4_desk.webp 1x, img/wx2/image4_desk.webp 2x, img/wx3/image4_desk.webp 3x')
-					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image4_tab.webp 1x, img/wx2/image4_tab.webp 2x, img/wx3/image4_tab.webp 3x')
-					source(type='image/webp', srcset='img/wx1/image4_mob.webp 1x, img/wx2/image4_mob.webp 2x, img/wx3/image4_mob.webp 3x')
-					source(media='(min-width: 1220px)', srcset='img/image4_desk.jpg')
-					source(media='(min-width: 768px)', srcset='img/image4_tab.jpg')
-					img(src='img/image4_mob.jpg', alt='Интерьер', title='Интерьер')
-				picture.about-us__img.about-us__gallery-item
-					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image5_desk.webp 1x, img/wx2/image5_desk.webp 2x, img/wx3/image5_desk.webp 3x')
-					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image5_tab.webp 1x, img/wx2/image5_tab.webp 2x, img/wx3/image5_tab.webp 3x')
-					source(type='image/webp', srcset='img/wx1/image5_mob.webp 1x, img/wx2/image5_mob.webp 2x, img/wx3/image5_mob.webp 3x')
-					source(media='(min-width: 1220px)', srcset='img/image5_desk.jpg')
-					source(media='(min-width: 768px)', srcset='img/image5_tab.jpg')
-					img(src='img/image5_mob.jpg', alt='Интерьер', title='Интерьер')
-			section.another-goods
-				h3.another-goods__title ДРУГИЕ ТОВАРЫ
-				.another-goods__content-block
-					svg.another-goods-switch(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
-						path(d='M22 2.5L4 20L22 37.5', stroke='black', stroke-width='4.5')
-					ul.another-goods__gallery-list
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-						li.another-goods__list-item
-							a.another-goods__list-link(href='#')
-								picture.another-goods__img
-									source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
-									source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
-									source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
-									source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
-									source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
-									img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
-								.another-goods__text-block
-									h4.another-goods__list-title Simple white clock
-									span.another-goods__list-price
-									| $25.00
-					svg.another-goods-switch(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
-						path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')
-				button.another-goods__button Смотреть больше
-	section.stock-slider
-		.collections-main_block-1
-			picture.another-goods__img
-				source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/BLOCK-3_desk.webp 1x, img/wx2/BLOCK-3_desk.webp 2x, img/wx3/BLOCK-3_desk.webp 3x')
-				source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/BLOCK-3_tab.webp 1x, img/wx2/BLOCK-3_tab.webp 2x, img/wx3/BLOCK-3_tab.webp 3x')
-				source(type='image/webp', srcset='img/wx1/BLOCK-3_mob.webp 1x, img/wx2/BLOCK-3_mob.webp 2x, img/wx3/BLOCK-3_mob.webp 3x')
-				source(media='(min-width: 1220px)', srcset='img/BLOCK-3_desk.jpg')
-				source(media='(min-width: 768px)', srcset='img/BLOCK-3_tab.jpg')
-				img(src='img/BLOCK-3_mob.jpg', alt='Интерьер', title='Интерьер')
-			.stock-main__text-block
-				p.stock-main__text Proin varius, libero at molestie lobortis
-			a.stock-slider__switcher(href='#')
-				svg.right-arrow(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
-					path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')
-	section.blog-main.main-wrapper
-		h3.blog-main__title blog
-		ul.blog-main__list
-			li.blog-main__item
-				a.blog-main__item-link(href='#')
-					.white-rectangle
-						time.blog-main__datetime(datetime='2019-09-13') 13 сен
-					picture.blog-main__photo
-						source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
-						source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
-						img.image(src='img/image8.1_desk.jpg')
-					p.blog-main__short-description
-						| Perfected with great effort and 
-						br
-						|	passion 
-						br
-						|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
-			li.blog-main__item
-				a.blog-main__item-link(href='#')
-					.white-rectangle
-						time.blog-main__datetime(datetime='2019-09-13') 13 сен
-					picture.blog-main__photo
-						source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
-						source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
-						img.image(src='img/image8.1_desk.jpg')
-					p.blog-main__short-description
-						| Perfected with great effort and 
-						br
-						|	passion 
-						br
-						|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
-			li.blog-main__item
-				a.blog-main__item-link(href='#')
-					.white-rectangle
-						time.blog-main__datetime(datetime='2019-09-13') 13 сен
-					picture.blog-main__photo
-						source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
-						source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
-						source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
-						img.image(src='img/image8.1_desk.jpg')
-					p.blog-main__short-description
-						| Perfected with great effort and 
-						br
-						|	passion 
-						br
-						|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
+		include includes/blocks/about-us.pug
+	//- 		section.another-goods
+	//- 			h3.another-goods__title ДРУГИЕ ТОВАРЫ
+	//- 			.another-goods__content-block
+	//- 				svg.another-goods-switch(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+	//- 					path(d='M22 2.5L4 20L22 37.5', stroke='black', stroke-width='4.5')
+	//- 				ul.another-goods__gallery-list
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 					li.another-goods__list-item
+	//- 						a.another-goods__list-link(href='#')
+	//- 							picture.another-goods__img
+	//- 								source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image11.3_desk.webp 1x, img/wx2/image11.3_desk.webp 2x, img/wx3/image11.3_desk.webp 3x')
+	//- 								source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image11.3_tab.webp 1x, img/wx2/image11.3_tab.webp 2x, img/wx3/image11.3_tab.webp 3x')
+	//- 								source(type='image/webp', srcset='img/wx1/image11.3_mob.webp 1x, img/wx2/image11.3_mob.webp 2x, img/wx3/image11.3_mob.webp 3x')
+	//- 								source(media='(min-width: 1220px)', srcset='img/image11.3_desk.jpg')
+	//- 								source(media='(min-width: 768px)', srcset='img/image11.3_tab.jpg')
+	//- 								img(src='img/image11.3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 							.another-goods__text-block
+	//- 								h4.another-goods__list-title Simple white clock
+	//- 								span.another-goods__list-price
+	//- 								| $25.00
+	//- 				svg.another-goods-switch(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+	//- 					path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')
+	//- 			button.another-goods__button Смотреть больше
+	//- section.stock-slider
+	//- 	.collections-main_block-1
+	//- 		picture.another-goods__img
+	//- 			source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/BLOCK-3_desk.webp 1x, img/wx2/BLOCK-3_desk.webp 2x, img/wx3/BLOCK-3_desk.webp 3x')
+	//- 			source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/BLOCK-3_tab.webp 1x, img/wx2/BLOCK-3_tab.webp 2x, img/wx3/BLOCK-3_tab.webp 3x')
+	//- 			source(type='image/webp', srcset='img/wx1/BLOCK-3_mob.webp 1x, img/wx2/BLOCK-3_mob.webp 2x, img/wx3/BLOCK-3_mob.webp 3x')
+	//- 			source(media='(min-width: 1220px)', srcset='img/BLOCK-3_desk.jpg')
+	//- 			source(media='(min-width: 768px)', srcset='img/BLOCK-3_tab.jpg')
+	//- 			img(src='img/BLOCK-3_mob.jpg', alt='Интерьер', title='Интерьер')
+	//- 		.stock-main__text-block
+	//- 			p.stock-main__text Proin varius, libero at molestie lobortis
+	//- 		a.stock-slider__switcher(href='#')
+	//- 			svg.right-arrow(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+	//- 				path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')
+	//- section.blog-main.main-wrapper
+	//- 	h3.blog-main__title blog
+	//- 	ul.blog-main__list
+	//- 		li.blog-main__item
+	//- 			a.blog-main__item-link(href='#')
+	//- 				.white-rectangle
+	//- 					time.blog-main__datetime(datetime='2019-09-13') 13 сен
+	//- 				picture.blog-main__photo
+	//- 					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
+	//- 					source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
+	//- 					img.image(src='img/image8.1_desk.jpg')
+	//- 				p.blog-main__short-description
+	//- 					| Perfected with great effort and 
+	//- 					br
+	//- 					|	passion 
+	//- 					br
+	//- 					|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
+	//- 		li.blog-main__item
+	//- 			a.blog-main__item-link(href='#')
+	//- 				.white-rectangle
+	//- 					time.blog-main__datetime(datetime='2019-09-13') 13 сен
+	//- 				picture.blog-main__photo
+	//- 					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
+	//- 					source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
+	//- 					img.image(src='img/image8.1_desk.jpg')
+	//- 				p.blog-main__short-description
+	//- 					| Perfected with great effort and 
+	//- 					br
+	//- 					|	passion 
+	//- 					br
+	//- 					|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
+	//- 		li.blog-main__item
+	//- 			a.blog-main__item-link(href='#')
+	//- 				.white-rectangle
+	//- 					time.blog-main__datetime(datetime='2019-09-13') 13 сен
+	//- 				picture.blog-main__photo
+	//- 					source(type='image/webp', media='(min-width: 1220px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', media='(min-width: 768px)', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(type='image/webp', srcset='img/wx1/image8.1_desk.webp 1x, img/wx2/image8.1_desk.webp 2x, img/wx3/image8.1_desk.webp 3x')
+	//- 					source(media='(min-width: 1220px)', srcset='img/image8.1_desk.jpg')
+	//- 					source(media='(min-width: 768px)', srcset='img/image8.1_desk.jpg')
+	//- 					img.image(src='img/image8.1_desk.jpg')
+	//- 				p.blog-main__short-description
+	//- 					| Perfected with great effort and 
+	//- 					br
+	//- 					|	passion 
+	//- 					br
+	//- 					|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
