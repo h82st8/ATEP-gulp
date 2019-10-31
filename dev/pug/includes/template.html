@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Recovery password</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -154,18 +154,6 @@
       </div>
     </header>
     <div class="header__shadow"></div>
-    <section class="modal modal--recovery">
-      <form class="modal__form" action="" method="post" name="password-recovery-form">
-        <h3 class="modal__title modal__title--recovery">Восстановление пароля</h3>
-        <label class="modal__label"><span class="modal__text">Введите ваш email адрес...</span>
-          <input class="modal__input modal__input--recovery" id="email-recovery" type="email" name="login-recovery" placeholder="Email..." required="">
-        </label>
-        <p class="modal__text">Укажите адрес эл. почты, который вы использовали при оформлении заказов в ATEP. Мы вышлем вам инструкцию по восстановлению пароля.</p>
-        <div class="modal__buttons modal__buttons--recovery">
-          <input class="modal__button modal__button--recovery form-button" type="submit" value="Восстановить пароль"><a class="modal__button form-button link-login modal__button--recovery" href="login.html">Вспомнили пароль?</a>
-        </div>
-      </form>
-    </section>
     <footer class="footer">
       <div class="footer__wrapper">
         <nav class="footer__item footer__item--menu">
@@ -195,5 +183,147 @@
         <div class="footer__item footer__item--info">@ 2019 ATEP. ® All Right Reserved</div>
       </div>
     </footer>
+    <div class="modal-wrapper"></div>
+    <section class="modal">
+          <picture class="modal__article-photo">
+            <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites_desk.webp 1x, img/wx2/modal-favorites_desk.webp 2x, img/wx3/modal-favorites_desk.webp 3x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites_tab.webp 1x, img/wx2/modal-favorites_tab.webp 2x, img/wx3/modal-favorites_tab.webp 3x">
+            <source type="image/webp" srcset="img/wx1/modal-favorites_mob.webp 1x, img/wx2/modal-favorites_mob.webp 2x, img/wx3/modal-favorites_mob.webp 3x">
+            <source media="(min-width: 1220px)" srcset="img/modal-favorites_desk.jpg">
+            <source media="(min-width: 768px)" srcset="img/modal-favorites_tab.jpg"><img class="image" src="img/modal-favorites_mob.jpg">
+          </picture>
+      <form class="modal__form modal__form--favorites-login" action="" method="post" name="login-form">
+        <h3 class="modal__title">Вход</h3>
+        <label class="modal__label visually-hidden" for="login-email">Введите email</label>
+        <input class="modal__input" id="login-email" type="email" name="login" placeholder="Email" required="">
+        <label class="modal__label visually-hidden" for="login-password">Введите пароль</label>
+        <input class="modal__input" id="login-password" name="pasword" type="password" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" required="">
+        <div class="modal__input modal__input--captcha g-recaptcha" id="recaptcha" data-sitekey="6LeBMLQUAAAAAMpIkzxAeI6yHx-dgA7k6XZaSZ2U"></div>
+        <div class="modal__label modal__label--captchaError"></div>
+        <div class="modal__buttons">
+          <div class="modal__button-group">
+            <input class="modal__button modal__button--login form-button" id="submit-login" type="submit" name="submit_login-login" value="Войти"><a class="modal__link link-recovery" href="recovery-password.html">Забыли пароль?</a>
+          </div><span>или</span><a class="modal__button form-button" href="#">Подписаться</a>
+        </div>
+      </form>
+    </section>
+    <section class="modal modal--recovery">
+      <form class="modal__form" action="" method="post" name="password-recovery-form">
+        <h3 class="modal__title modal__title--recovery">Восстановление пароля</h3>
+        <label class="modal__label"><span class="modal__text">Введите ваш email адрес...</span>
+          <input class="modal__input modal__input--recovery" id="email-recovery" type="email" name="login-recovery" placeholder="Email..." required="">
+        </label>
+        <p class="modal__text">Укажите адрес эл. почты, который вы использовали при оформлении заказов в ATEP. Мы вышлем вам инструкцию по восстановлению пароля.</p>
+        <div class="modal__buttons modal__buttons--recovery">
+          <input class="modal__button modal__button--recovery form-button" type="submit" value="Восстановить пароль"><a class="modal__button form-button link-login modal__button--recovery" href="login.html">Вспомнили пароль?</a>
+        </div>
+      </form>
+    </section>
+    <section class="modal-right modal-right--favorites">
+      <h3 class="modal-right__title">Избранное</h3>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
+          <button class="modal-right__add-cart">Добавить в корзину</button>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
+          <button class="modal-right__add-cart">Добавить в корзину</button>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"><span class="visually-hidden">Удалить из избранного</span></button>
+          <button class="modal-right__add-cart">Добавить в корзину</button>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div><a class="modal-right__button form-button" href="lookbook.html">Lookbook</a>
+      <button class="modal-right__close"><span class="visually-hidden">Выйти из избранного</span></button>
+    </section>
+    <section class="modal-right modal-right--cart">
+      <h3 class="modal-right__title modal-right__title--cart">Корзина</h3>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"></button><span class="visually-hidden">Удалить из корзины</span>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"></button><span class="visually-hidden">Удалить из корзины</span>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div>
+      <div class="modal-right__item">
+            <picture class="modal-right__photo">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/wx1/modal-favorites-img_2_desk.webp 1x, img/wx2/modal-favorites-img_2_desk.webp 2x, img/wx3/modal-favorites-img_2_desk.webp 3x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/wx1/modal-favorites-img_2_tab.webp 1x, img/wx2/modal-favorites-img_2_tab.webp 2x, img/wx3/modal-favorites-img_2_tab.webp 3x">
+              <source type="image/webp" srcset="img/wx1/modal-favorites-img_2_mob.webp 1x, img/wx2/modal-favorites-img_2_mob.webp 2x, img/wx3/modal-favorites-img_2_mob.webp 3x">
+              <source media="(min-width: 1220px)" srcset="img/modal-favorites-img_2_desk.jpg">
+              <source media="(min-width: 768px)" srcset="img/modal-favorites-img_2_tab.jpg"><img class="image" src="img/modal-favorites-img_2_mob.jpg">
+            </picture>
+        <div class="modal-right__content">
+          <button class="modal-right__delete"></button><span class="visually-hidden">Удалить из корзины</span>
+          <p class="modal-right__text">Boys light blue jacket</p>
+          <p class="modal-right__text">1 × <span class="modal-right__price">$35.99</span></p>
+        </div>
+      </div>
+      <p class="modal-right__amount-payable-empty modal-right__amount-payable--toggle">Ваша корзина пуста</p>
+      <p class="modal-right__amount-payable">Всего:&ensp;<span>$164.97</span></p><a class="modal-right__button-cart form-button" href="cart.html">Посмотреть товары</a><a class="modal-right__button-cart form-button" href="#">Купить сейчас</a>
+      <button class="modal-right__close"><span class="visually-hidden">Выйти из корзины</span></button>
+    </section>
+    <section class="modal-search">
+      <form class="modal-search__form" action="" method="post" name="modal-search-form">
+        <h3 class="modal-search__title">Поиск</h3>
+        <label for="form-search-input"></label>
+        <input class="modal-search__input" id="form-search-input" type="text" name="form-search-input" onkeyup="checkSearchForm();" minlength="3" placeholder="поиск">
+        <input class="modal-search__button" type="submit" value="Искать">
+      </form>
+    </section>
   </body>
+  <script type="text/javascript" src="js/script.js"></script>
 </html>

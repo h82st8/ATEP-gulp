@@ -14,21 +14,20 @@ const gulp         = require('gulp'),
 			responsive   = require('gulp-responsive'),
 			webp         = require('gulp-webp'),
 			newer        = require('gulp-newer'),
-			bwsync       = require('browser-sync').create(),
-			pug			 = require('gulp-pug');
+			pug          = require('gulp-pug'),
+			bwsync       = require('browser-sync').create();
 
 const path = {
 						build: {
-							html:   'dev/',
 							css:    'dev/css/',
-							srccss: 'src/css/',
 							js:     'dev/js/',
 							img:    'dev/img/',
 							imgx:   'dev/img/wx3/',
-							font:   'src/fonts/'
+							font:   'dev/fonts/'
 						},
 						src: {
-							html: 'src/**/*.html',
+							pug: ['src/pug/**/*.pug',
+										'!src/pug/includes/*.pug'],
 							css:  'src/scss/style.scss',
 							js:  ['src/js/*.js',],
 							img: ['src/img/**/*.jpg',
@@ -38,7 +37,7 @@ const path = {
 						},
 						watch: {
 							dev:  'src',
-							html: 'src/**/*.html',
+							pug:  'src/pug/**/*.pug',
 							css:  'src/scss/**/*.scss',
 							js:   'src/js/*.js',
 							img: ['src/img/**/*.jpg',
@@ -58,9 +57,11 @@ gulp.task('serv', function() {
 	bwsync.watch(path.watch.dev, bwsync.reload);
 });
 
-gulp.task('html', function() {
-	return gulp.src(path.src.html)
-		.pipe(plumber())
+gulp.task('pug', function () {
+	return gulp.src(path.src.pug)
+		.pipe(pug({
+			pretty:true
+		}))
 		.pipe(gulp.dest(path.build.html))
 		.pipe(bwsync.stream());
 });
@@ -82,11 +83,10 @@ gulp.task('style', function() {
 				overrideBrowserslist: ['last 10 versions']
 			})
 		]))
-		.pipe(gulp.dest(path.build.srccss))
-		.pipe(bwsync.stream())
 		.pipe(stripCss())
 		.pipe(uglifyCss())
-		.pipe(gulp.dest(path.build.css));
+		.pipe(gulp.dest(path.build.css))
+		.pipe(bwsync.stream());
 });
 
 gulp.task('js', function () {
@@ -150,16 +150,8 @@ gulp.task('imgx1', function() {
 		.pipe(gulp.dest(path.build.img));
 });
 
-gulp.task('pug', function () {
-	return gulp.src('src/pug/pages/*.pug')
-		.pipe(pug({
-			pretty:true
-		}))
-		.pipe(gulp.dest(path.build.html))
-});
-
 gulp.task('watch', function() {
-	gulp.watch(path.watch.html, gulp.series('html'));
+	gulp.watch(path.watch.pug, gulp.series('pug'));
 	gulp.watch(path.watch.css, gulp.series('style'));
 	gulp.watch(path.watch.js, gulp.series('js'));
 	gulp.watch(path.watch.font, gulp.series('font'));

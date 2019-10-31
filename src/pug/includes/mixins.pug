@@ -42,6 +42,15 @@ mixin menuLookbookBlog(className1,className2)
 			a(class=className2,aria-label='Blog', href='blog.html')
 				each val in ['B','l','o','g']
 					span= val
+	li(class=className1)
+		if(blogHtml)
+			a(class=className2,aria-label='Good')
+				each val in ['G','o','o','g']
+					span= val
+		else
+			a(class=className2,aria-label='Blog', href='good.html')
+				each val in ['G','o','o','g']
+					span= val
 
 mixin icon(classNameA,nameIcon,srcIcon)
 			a(class='user-menu__link '+classNameA)
