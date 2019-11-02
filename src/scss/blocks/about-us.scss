@@ -1,71 +1,88 @@
 .about-us {
     padding-top: 67px;
     padding-bottom: 87px;
+}
 
-    .about-us__preview {
-        @include flex (row, space-between);
-        align-items: center;
-        margin-bottom: 55px;
+.about-us__preview {
+    @include flex (row, space-between);
+    align-items: center;
+    margin-bottom: 55px;
+}
 
-        .about-us__preview-content {
-            width: 690px;
-            order: 1;
+.about-us__preview-content {
+    width: 690px;
+    order: 1;
+}
 
-            .about-us__title {
-                font-size: 43px;
-                line-height: 57px;
-                font-weight: normal;
-                text-align: center;
-            }
+.about-us__title {
+    font-size: 43px;
+    line-height: 57px;
+    font-weight: normal;
+    text-align: center;
+}
 
-            .about-us__text {
-                @include font($main-font-family, 23px, normal, 31px, $main-text-color, none);
-                text-align: center;
-            }
-        }
+.about-us__text {
+    @include font($main-font-family, 23px, normal, 31px, $main-text-color, none);
+    text-align: center;
+}
 
+.about-us__gallery {
+    @include flex (row, space-between)
+}
+
+.about-us__item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    color: $main-text-color;
+
+    &:hover .about-us__icon-block {
+        transform: translateX(-80px);
     }
 
-    .about-us__gallery {
-        @include flex (row, space-between)
+    &:hover .about-us__img-text {
+        transform: translateX(190px);
     }
 
-    .about-us__img-link {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        text-decoration: none;
-        color: $main-text-color;
+}
 
-        .about-us__img-icon {
-            position: absolute;
-            transition: .5s;
-            top: 30px;
-            right: -55px;
-        }
+.about-us__link {
+    text-decoration: none;
 
-        .about-us__img-text {
-            position: absolute;
-            transition: .5s;
-            bottom: 15px;
-            left: -170px;
-
-            .about-us__img-title {
-                margin-bottom: 0;
-                @include font($accent-font-family, 17px, 300, 25px, $main-text-color, none);
-            }
-
-            .about-us__img-price {
-                @include font($accent-font-family, 17px, 300, 25px, $active-text-color, none);
-            }
-        }
-
-        &:hover .about-us__img-icon {
-            transform: translateX(-80px);
-        }
-
-        &:hover .about-us__img-text {
-            transform: translateX(190px);
-        }
+    &:focus ~ .about-us__icon-block {
+        transform: translateX(-80px);
     }
+
+    &:focus ~ .about-us__img-text {
+        transform: translateX(190px);
+    }
+}
+
+.about-us__icon-block {
+    position: absolute;
+    transition: .5s;
+    top: 30px;
+    right: -55px;
+}
+
+.about-us__icon {
+    fill: #000;
+    stroke: #000;
+}
+
+.about-us__img-text {
+    position: absolute;
+    transition: .5s;
+    bottom: 15px;
+    left: -170px;
+}
+
+.about-us__img-title {
+    margin-bottom: 0;
+    @include font($accent-font-family, 17px, 300, 25px, $main-text-color, none);
+}
+
+.about-us__img-price {
+    @include font($accent-font-family, 17px, 300, 25px, $active-text-color, none);
 }

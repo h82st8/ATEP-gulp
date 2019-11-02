@@ -1,6 +1,7 @@
 include ../mixins.pug
 
 .main-slider
+	h2.visually-hidden Слайдер
 	section.main-slider__item
 		.main-slider__content
 			h2.main-slider__title
@@ -12,6 +13,6 @@ include ../mixins.pug
 				br
 				| для Летнего Сезона
 			+link('main-slider__btn','Купить сейчас!')
-		a.control(href='#')
+		button.control.main-slider__control
 			svg.right-arrow(width='24', height='40', viewBox='0 0 24 40', fill='none', xmlns='http://www.w3.org/2000/svg')
 				path(d='M2 37.5L20 20L2 2.5', stroke='black', stroke-width='4.5')

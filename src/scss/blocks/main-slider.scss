@@ -2,55 +2,52 @@
     width: 100%;
     padding: 68px 15px;
     background-color: $main-slider-background;
+}
 
-    .main-slider__item {
-        position: relative;
-        @include size(1410px, 559px);
-        margin: 0 auto;
-        background: url('../img/image2.5_desk.jpg') no-repeat center;
-        background-size: cover;
+.main-slider__item {
+    position: relative;
+    @include size(1410px, 559px);
+    margin: 0 auto;
+    background: url('../img/image2.5_desk.jpg') no-repeat center;
+    background-size: cover;
+}
 
-        .main-slider__content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+.main-slider__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-            .main-slider__title {
-                margin-bottom: 0;
-                @include font($main-font-family, 20px, normal, 27px, $main-background, none);
-                text-align: center;
-            }
+.main-slider__title {
+    margin-bottom: 0;
+    @include font($main-font-family, 20px, normal, 27px, $main-background, none);
+    text-align: center;
+}
 
-            .main-slider__text {
-                display: inline-block;
-                margin: 0;
-                @include font($main-font-family, 43px, normal, 57px, $main-background, none);
-                text-align: center;
-            }
+.main-slider__text {
+    display: inline-block;
+    margin: 0;
+    @include font($main-font-family, 43px, normal, 57px, $main-background, none);
+    text-align: center;
+}
 
-            .main-slider__btn {
-                display: block;
-                width: 137px;
-                margin: 0 auto;
-                margin-top: 29px;
-                padding: 7px 36px;
-                text-decoration: none;
-                @include font($main-font-family, 20px, normal, 27px, $main-text-color, none);
+.main-slider__btn {
+    display: block;
+    width: 137px;
+    margin: 0 auto;
+    margin-top: 29px;
+    padding: 7px 36px;
+    text-decoration: none;
+    @include font($main-font-family, 20px, normal, 27px, $main-text-color, none);
 
-                background: rgba(255, 255, 255, 0.65);
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.39);
-                border-radius: 8px;
-            }
-        }
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.39);
+    border-radius: 8px;
+}
 
-        .control { 
-            position: absolute;
-            right: 0;
-            top: 50%;
-            padding: 22px 28px;
-            background: rgba(255, 255, 255, 0.65);
-            transform: translateY(-50%);
-        }
-    }
+.main-slider__control {
+    position: absolute;
+    right: 0;
+    top: 50%;
 }
