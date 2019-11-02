@@ -1,5 +1,5 @@
 .another-goods {
-    margin-bottom: 83px;
+    padding-bottom: 83px;
 }
 
 .another-goods__title {
@@ -12,45 +12,60 @@
     align-items: center;
 }
 
+.another-goods__control-left,
+.another-goods__control-right {
+    padding: 0;
+    cursor: pointer;
+}
 
-.another-goods__gallery-list {
+.another-goods-switch {
+    width: 18px;
+    height: 35px;
+}
+
+.another-goods__list {
     @include flex(row, space-evenly);
     flex-wrap: wrap;
     padding: 0;
+}
 
-    .another-goods__list-item {
-        position: relative;
-        margin-bottom: 30px;
-        list-style: none;
-    }
+.another-goods__list-item {
+    position: relative;
+    margin-bottom: 30px;
+    list-style: none;
+    overflow: hidden;
 }
 
 .another-goods__text-block {
     position: absolute;
     bottom: 10px;
-    left: 11px;
-    display: none;
+    left: -150px;
     @include font($accent-font-family, 15px, normal, 22px, $modal-text-color, none);
-
-    .another-goods__list-title {
-        margin-bottom: 0;
-    }
+    transition: .5s;
 }
 
-.another-goods__list-link:hover .another-goods__text-block {
-    display: block;
+.another-goods__list-title {
+    margin-bottom: 0;
+}
+
+.another-goods__link:hover .another-goods__text-block {
+    left: 11px;
+}
+
+.another-goods__link:focus .another-goods__text-block {
+    left: 11px;
 }
 
 .another-goods__button {
     display: block;
     width: 270px;
-    height: 57px;
     margin: 0 auto;
-
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    background-color: #fff;
-
+    padding-top: 14px;
+    padding-bottom: 14px;
+    box-sizing: border-box; 
     @include font($main-font-family, 22px, normal, 29px, $main-text-color, none);
     text-align: center;
+    text-decoration: none;
+    border: 1px solid #000000;
+    cursor: pointer;
 }

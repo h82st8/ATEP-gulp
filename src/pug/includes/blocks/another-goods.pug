@@ -1,0 +1,20 @@
+include ../mixins.pug
+
+section.another-goods
+	h3.another-goods__title ДРУГИЕ ТОВАРЫ
+	.another-goods__content-block
+		button.control.another-goods__control-left
+			svg.another-goods-switch(viewBox='0 0 24 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(d='M22 2.5L4 20L22 37.5' stroke='black' stroke-width='4.5')
+		ul.another-goods__list
+			- for(var i = 0; i < 8; i++)   
+				li.another-goods__list-item
+					a.another-goods__link(href='#')
+						+picture('another-goods__img', 'image11.3')
+						.another-goods__text-block
+							h4.another-goods__list-title Simple white clock
+							span.another-goods__price $25.00
+		button.control.another-goods__control-right
+			svg.another-goods-switch(viewBox='0 0 24 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+				path(d='M2 37.5L20 20L2 2.5' stroke='black' stroke-width='4.5')
+	a.another-goods__button(href="#") Смотреть больше

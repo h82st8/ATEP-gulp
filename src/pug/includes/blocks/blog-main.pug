@@ -1,0 +1,16 @@
+include ../mixins.pug
+
+section.blog-main.main-wrapper
+	h3.blog-main__title blog
+	ul.blog-main__list
+		- for(var i = 0; i < 3; i++)
+			li.blog-main__item
+				a.blog-main__link(href='#')
+					time.blog-main__datetime(datetime='2019-09-13') 13 сен
+					+picture('blog-main__img', 'image8.1')
+					p.blog-main__text
+						| Perfected with great effort and 
+						br
+						|	passion 
+						br
+						|	Posted by Logan2 Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Etiam porttitor
