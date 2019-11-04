@@ -1,0 +1,33 @@
+include ../mixins.pug
+
+.cathegory-nav
+	nav.cathegory-nav__content
+		ul.cathegory-nav__flex-container
+			li.cathegory-nav__item
+				a.cathegory-nav__link.cathegory-nav__link_active(href="#") Все
+			li.cathegory-nav__item.cathegory-nav__item--submenu
+				a.cathegory-nav__link(href="#") Одежда
+				.submenu
+					ul.submenu-list
+						- var clothes = ['Платья', 'Блузки', 'Футболки', 'Брюки', 'Юбки']
+						- for(var i = 0; i < clothes.length; i++)
+							li.submenu-list__item
+								a.submenu-list__link(href='#')=clothes[i]					
+			li.cathegory-nav__item.cathegory-nav__item--submenu
+				a.cathegory-nav__link(href="#") Обувь
+				.submenu
+					ul.submenu-list
+						- var clothes = ['Кроссовки', 'Кеды', 'Туфли', 'Балетки', 'Сланцы']
+						- for(var i = 0; i < clothes.length; i++)
+							li.submenu-list__item
+								a.submenu-list__link(href='#')=clothes[i]
+			li.cathegory-nav__item.cathegory-nav__item--submenu
+				a.cathegory-nav__link(href="#") Аксессуары
+				.submenu
+					ul.submenu-list
+						- var clothes = ['Часы', 'Серьги', 'Кольца', 'Ожерелье', 'Поло']
+						- for(var i = 0; i < clothes.length; i++)
+							li.submenu-list__item
+								a.submenu-list__link(href='#')=clothes[i]
+			li.cathegory-nav__item.cathegory-nav__item--new
+				a.cathegory-nav__link(href="#") Новикнки

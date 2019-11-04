@@ -1,0 +1,12 @@
+include ../mixins.pug
+
+main.cathalog
+	ul.cathalog-list
+		- for(var i = 0; i < 9; i++)
+			li.cathalog-item
+				.cathalog-item__pink-hue
+					+link('cathalog-item__link-button', 'View')
+				+picture('cathalog-item__img', 'image2')
+				h3.cathalog-item__title Simple white clock
+				p.cathalog-item__price $25.00
+				+link('cathalog-item__link-feedback', 'Оставить отзыв')
