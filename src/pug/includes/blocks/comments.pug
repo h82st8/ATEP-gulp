@@ -1,0 +1,23 @@
+article#comments.comments.main-wrapper
+	h3.visually-hidden Комментарии
+	span.comments__header 3 comments
+	ul.comments__list
+		- for(var i = 0; i < 3; i++)
+			li.comments__item
+				.comments__item-left
+					+picture('comments__user-img', 'image15.2')
+				.comments__item-right
+					h3.comments__user-name Fatema Asrafi
+					time(datetime="2019-05-17T01:59") May 17, 2018 at 1:59 am
+					blockquote.comments__user-blockquote
+					| To link your Facebook and Twitter accounts, open the Instagram app on your phone or tablet, and select the Profile tab in the bottom-right corner of the screen.
+		form.comments-form(action="#" method="POST")
+			h4.comments-form__header Оставь свой комментарий
+			label.comments-form__label-comments(for="your-review") Your review*
+			textarea#your-review.comments-form__textarea(name="your-review" cols="30" rows="10")
+			label.comments-form__label-name(for="name") Name*
+			input#name.comments-form__input-name(type="text")
+			label.comments-form__label-email(for="email-comments") E-Mail*
+			input#email-comments.comments-form__input-email(type="email" name="")
+			img.comments-form__captcha(src="img/Rectangle-5_desk.jpg" alt="")
+			input.comments-form__submit.form-button(type="submit" value="Добавить комментарий")
