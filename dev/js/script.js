@@ -300,9 +300,9 @@ window.onload = function () {
       var dataTab = event.target.getAttribute('data-tab');
       var tabH = document.getElementsByClassName('good_info__btn');
       for(var i = 0; i < tabH.length; i++){
-        tabH[i].classList.remove('active');
+        tabH[i].classList.remove('good_info__btn--active');
       }
-      event.target.classList.add('active');
+      event.target.classList.add('good_info__btn--active');
 
       var tabBody = document.getElementsByClassName('tab-block');
 
@@ -329,3 +329,8 @@ window.onload = function () {
     }
   }
 }
+
+
+
+
+

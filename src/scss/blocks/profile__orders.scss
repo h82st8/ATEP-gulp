@@ -1,0 +1,45 @@
+.profile__subtitle {
+	margin-top: 0;
+
+	text-transform: uppercase;
+
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 37px;
+}
+
+.profile__orders_txt {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 22px;
+	color: $active-text-color;
+}
+
+.profile__orders_good_wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+
+	margin-top: 1.5em;
+
+	.profile__orders_good_img {
+		margin-right: 0.6em;
+		width: 10%;
+	}
+
+	.orders_good_txt_wrap {
+		display: inline-block;
+
+		.profile__orders_good_txt {
+			display: block;
+
+			margin-bottom: 0;
+
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 22px;
+			color: $main-text-color;
+		}
+	}
+
+}

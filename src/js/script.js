@@ -308,12 +308,12 @@ window.onload = function () {
     if (event.target.className == 'good_info__btn'){
       //dataTab - номер вкладки, которую нужно отобразить
       var dataTab = event.target.getAttribute('data-tab');
-      //отключаю класс active
+      //отключаю класс .good_info__btn_active
       var tabH = document.getElementsByClassName('good_info__btn');
       for(var i = 0; i < tabH.length; i++){
-        tabH[i].classList.remove('active');
+        tabH[i].classList.remove('good_info__btn--active');
       }
-      event.target.classList.add('active');
+      event.target.classList.add('good_info__btn--active');
       //все вкладки с содержимым
 
       var tabBody = document.getElementsByClassName('tab-block');
@@ -341,3 +341,45 @@ window.onload = function () {
     }
   }
 }
+
+// window.onload = function () {
+//   document.querySelector('.profile__tabs').addEventListener('click', funcTabs);
+  
+//   function funcTabs(event) {
+//     console.log(event);
+//     if (event.target.className == 'profile__tab'){
+//       //dataTab - номер вкладки, которую нужно отобразить
+//       var dataTab = event.target.getAttribute('data-profile__tab');
+//       //отключаю класс .profile__tab--active
+//       var tabH = document.getElementsByClassName('profile__tab');
+//       for(var i = 0; i < tabH.length; i++){
+//         tabH[i].classList.remove('profile__tab--active');
+//       }
+//       event.target.classList.add('profile__tab--active');
+//       //все вкладки с содержимым
+
+//       var tabBody = document.getElementsByClassName('profile__orders');
+
+//       function fadeIn(tabBody) {
+//         var opacity = 0.01;
+//         tabBody.style.opacity = 0.01;
+//         tabBody.style.display = "block";
+//         var timer = setInterval(function() {
+//           if(opacity >= 1) {
+//             clearInterval(timer);
+//           }
+//           tabBody.style.opacity = opacity;
+//             opacity += opacity * 0.1;
+//         }, 10);
+//       }
+
+//       for (var i = 0; i < tabBody.length; i++){
+//         if (dataTab == i) {
+//           fadeIn(tabBody[i]);
+//         }else {
+//           tabBody[i].style.display = 'none';
+//         }
+//       }
+//     }
+//   }
+// }

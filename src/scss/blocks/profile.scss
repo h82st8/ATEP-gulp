@@ -1,0 +1,59 @@
+.main__profile {
+	width: 85%;
+	margin: 0 auto;
+
+	font-family: $accent-font-family;
+	color: $main-text-color;
+
+	.profile__title_wrap {
+		padding: 10px 0;
+		border-top: 1px solid #DCDCDC;
+		border-bottom: 1px solid #DCDCDC;
+
+		.profile__title {
+			text-align: center;
+
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+
+	.profile__content_wrap {
+		display:grid;
+		grid-template-columns: 1.1fr 2fr;
+		grid-auto-rows: minmax(28em, auto);
+		grid-column-gap: 5%;
+		margin-top: 5em;
+		margin-left: 12%;
+
+		.profile__tabs {
+			padding-top: 2em;
+
+			.profile__tab {
+				display: block;
+				padding: 20px 10px;
+				border: none;
+				border-bottom: 1px solid $accent-background;
+
+				width: 100%;
+
+				background-color: $main-background;
+
+				text-align: left;
+				text-transform: uppercase;
+
+				font-weight: normal;
+				font-size: 21px;
+				line-height: 31px;
+
+				cursor: pointer;
+			}
+
+			.profile__tab--active {
+				background-color: $accent-background;
+				color: $accent-text-color;
+			}
+		}
+	}
+}

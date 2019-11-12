@@ -1,0 +1,19 @@
+extends includes/template.pug
+
+block variables
+	- var title = 'Profile'
+	- var goodHtml = true
+
+block content
+	main.main__profile
+		.profile__title_wrap
+			h1.profile__title Главная / Профиль
+		.profile__content_wrap
+			.profile__tabs
+				button(data-profile__tab='0').profile__tab.profile__tab--active МОИ ЗАКАЗЫ
+				button(data-profile__tab='1').profile__tab МОЙ ПРОФИЛЬ
+				button(data-profile__tab='2').profile__tab мои адреса доставки
+			.profile__tab_content
+				include includes/blocks/profile__orders.pug
+				include includes/blocks/profile__profile.pug
+				include includes/blocks/profile__shipping.pug
